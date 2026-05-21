@@ -1,0 +1,138 @@
+version: "2"
+
+run:
+  timeout: 10m
+  build-tags:
+    - integration
+    - integration_api
+    - integration_cli
+    - integration_k8s
+    - integration_provision
+
+linters:
+  enable:
+    # Error detection
+    - errcheck
+    - govet
+    - staticcheck
+
+    # Style & formatting
+    - misspell
+    - revive
+
+    # Complexity & maintainability
+    - gocyclo
+    - cyclop
+    - nakedret
+
+    # Performance & correctness
+    - prealloc
+    - unconvert
+    - ineffassign
+
+    # Code quality
+    - dupl
+    - goconst
+    - exhaustive
+    - depguard
+    - bodyclose
+    - durationcheck
+    - nilerr
+
+    # Go module directives
+    - gomoddirectives
+
+    # Line length
+    - lll
+
+    # Linter enforcement
+    - nolintlint
+
+  settings:
+    errcheck:
+      check-type-assertions: true
+      check-blank: true
+    exhaustive:
+      default-signifies-exhaustive: true
+    gocyclo:
+      min-complexity: 10
+    dupl:
+      threshold: 100
+    goconst:
+      min-len: 3
+      min-occurrences: 3
+    depguard:
+      rules:
+        main:
+          deny:
+            - pkg: "github.com/golang/protobuf/proto"
+              desc: not allowed
+            - pkg: "google.golang.org/protobuf/proto"
+              desc: not allowed
+    misspell:
+      locale: US
+    lll:
+      line-length: 200
+      tab-width: 1
+    revive:
+      rules:
+        - name: unexported-return
+          disabled: true
+    nakedret:
+      max-func-lines: 30
+    nolintlint:
+      allow-unused: false
+      require-explanation: false
+      require-specific: true
+    prealloc:
+      simple: true
+      range-loops: true
+      for-loops: false
+    cyclop:
+      max-complexity: 20
+    gomoddirectives:
+      replace-local: true
+      replace-allow-list:
+        - gopkg.in/yaml.v3
+        - inet.af/tcpproxy
+      retract-allow-no-explanation: false
+      exclude-forbidden: true
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+    paths:
+      - pkg/api/client$
+      - .*\.pb\.go$
+
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - goimports
+  settings:
+    gofmt:
+      simplify: true
+    gci:
+      sections:
+        - standard
+        - default
+        - prefix(github.com/0xkey-io)
+      custom-order: true
+  exclusions:
+    generated: lax
+    paths:
+      - pkg/api/client$
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+  # Show only new issues: if there are unstaged changes or untracked files,
+  # only those changes are analyzed, else only changes in HEAD~ are analyzed.
+  # It's a super-useful option for integration of golangci-lint into existing
+  # large codebase. It's not practical to fix all existing issues at the moment
+  # of integration: much better don't allow issues in new code.
+  # Default is false.
+  new: false

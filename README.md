@@ -1,17 +1,26 @@
 # 0xkey Go SDK
+
 [![GoDocs](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/0xkey-io/sdk-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/0xkey-io/sdk-go)](https://goreportcard.com/report/github.com/0xkey-io/sdk-go)
 
-The 0xkey Go SDK is an early tool for interacting with the 0xkey API.
+The official Go SDK for the [0xkey](https://0xkey.io) platform. Provides API client, key management, enclave encryption, and cryptographic verification capabilities.
 
-There is much work to be done, but it is completly usable in its current form.  The main thing to keep in mind is that each requests needs to be manually provided the client.Authenticator.
+## Installation
 
-## Usage
+```bash
+go get github.com/0xkey-io/sdk-go@v0.1.0
+```
 
-### API key
+Requires **Go 1.21+**.
 
-In order to use the SDK, you will need an API key. When creating API keys, the private key never leaves the local system, but the public key must be registered to your 0xkey account.
+## Quick Start
 
-The easiest way to manage your API keys is with the [0xkey CLI](https://github.com/0xkey-io/cli), but you can also create one using this SDK. See [this example](./examples/apikey/).
+### Prerequisites
+
+1. Create an organization at [0xkey.io](https://0xkey.io)
+2. Generate and register an API key (private key stays local, public key registered to your account)
+
+The easiest way to manage API keys is with the [0xkey CLI](https://github.com/0xkey-io/cli). You can also generate keys programmatically — see [examples/apikey](./examples/apikey/).
 
 ### Example
 
@@ -46,6 +55,32 @@ func main() {
 	fmt.Println("UserID: ", *resp.Payload.UserID)
 }
 ```
+
+### Custom API Host (Staging / Private Deployment)
+
+```go
+cfg := client.DefaultTransportConfig()
+cfg.Host = "api.staging.0xkey.io"
+
+client, err := sdk.New(
+    sdk.WithAPIKey(key),
+    sdk.WithTransportConfig(*cfg),
+)
+```
+
+### Sub-packages
+
+| Package | Purpose |
+|---------|---------|
+| `pkg/apikey` | Key generation and API request signing |
+| `pkg/encryptionkey` | Encryption key management |
+| `pkg/enclave_encrypt` | HPKE-based enclave encryption (OTP, import/export) |
+| `pkg/crypto` | Session JWT and OTP token verification |
+| `pkg/proofs` | Nitro enclave attestation verification |
+| `pkg/store/local` | Local key storage (`~/.config/0xkey/keys/`) |
+| `pkg/api/client` | Low-level generated API client (go-swagger) |
+
+You can import sub-packages independently without initializing the full `sdk.New()` client.
 
 ### Error Handling
 
@@ -82,6 +117,20 @@ client, err := sdk.New(
 )
 ```
 If no logger is provided, the SDK falls back to `fmt.Printf("0xkey API response: ...")` to preserve current behavior.
+
+## Versioning & Releases
+
+This SDK follows [semantic versioning](https://semver.org/). Install and upgrade via Go modules:
+
+```bash
+go get github.com/0xkey-io/sdk-go@latest
+```
+
+- **API reference:** [pkg.go.dev](https://pkg.go.dev/github.com/0xkey-io/sdk-go)
+- **Release notes:** [GitHub Releases](https://github.com/0xkey-io/sdk-go/releases)
+- **Changelog:** [CHANGELOG.md](./CHANGELOG.md)
+
+> **Note:** Go modules (`go get`) is the installation method. GitHub Releases provide version notes and upgrade guidance only.
 
 ## Development
 

@@ -47,6 +47,9 @@ const (
 
 	// ActivityStatusRejected captures enum value "ACTIVITY_STATUS_REJECTED"
 	ActivityStatusRejected ActivityStatus = "ACTIVITY_STATUS_REJECTED"
+
+	// ActivityStatusAuthenticatorsNeeded captures enum value "ACTIVITY_STATUS_AUTHENTICATORS_NEEDED"
+	ActivityStatusAuthenticatorsNeeded ActivityStatus = "ACTIVITY_STATUS_AUTHENTICATORS_NEEDED"
 )
 
 // for schema
@@ -54,7 +57,7 @@ var ActivityStatusEnum []ActivityStatus
 
 func init() {
 	var res []ActivityStatus
-	if err := json.Unmarshal([]byte(`["ACTIVITY_STATUS_CREATED","ACTIVITY_STATUS_PENDING","ACTIVITY_STATUS_COMPLETED","ACTIVITY_STATUS_FAILED","ACTIVITY_STATUS_CONSENSUS_NEEDED","ACTIVITY_STATUS_REJECTED"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["ACTIVITY_STATUS_CREATED","ACTIVITY_STATUS_PENDING","ACTIVITY_STATUS_COMPLETED","ACTIVITY_STATUS_FAILED","ACTIVITY_STATUS_CONSENSUS_NEEDED","ACTIVITY_STATUS_REJECTED","ACTIVITY_STATUS_AUTHENTICATORS_NEEDED"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {

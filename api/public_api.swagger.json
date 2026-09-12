@@ -13360,6 +13360,9 @@
           "type": "boolean",
           "x-nullable": true,
           "description": "Invalidate all other previously generated Login API keys"
+        },
+        "sessionProfileId": {
+          "type": "string"
         }
       },
       "required": [

@@ -15,7 +15,7 @@ import (
 
 const frozenOpenAPISHA256 = "b42fcfa9a9480c2d4148038b8d9112559132b11727c7f839e05cb2782e3350e2" // gitleaks:allow
 const frozenServicesCommit = "096c1fec26bed3b3f8104b473b35903db76760bb"
-const frozenGeneratorInputSHA256 = "7bb267ce5f553848f6ecb97e092232ccc7c6d5eb4bdacdef3dcf52eafbfeeeb3"
+const frozenGeneratorInputSHA256 = "80ab0f8b800ff3132d40397da71150d0eafb9b224e1107d5729e4a91990da4af"
 
 //nolint:gocyclo // One table-like contract assertion intentionally checks every pinned field.
 func TestGeneratedMfaContractPin(t *testing.T) {
@@ -106,4 +106,25 @@ func TestGeneratedClientHasGetMfaStatus(t *testing.T) {
 	}
 	var api m_f_a_policies.ClientService
 	_ = api
+}
+
+func TestGeneratedStampLoginIntentMarshalsSessionProfileID(t *testing.T) {
+	publicKey := "04deadbeef"
+	profileID := "session-profile-1"
+	intent := models.StampLoginIntent{
+		PublicKey:        &publicKey,
+		SessionProfileID: profileID,
+	}
+
+	raw, err := json.Marshal(intent)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var payload map[string]any
+	if err := json.Unmarshal(raw, &payload); err != nil {
+		t.Fatal(err)
+	}
+	if got := payload["sessionProfileId"]; got != profileID {
+		t.Fatalf("sessionProfileId=%v want %q", got, profileID)
+	}
 }

@@ -17,6 +17,7 @@ const frozenOpenAPISHA256 = "b42fcfa9a9480c2d4148038b8d9112559132b11727c7f839e05
 const frozenServicesCommit = "096c1fec26bed3b3f8104b473b35903db76760bb"
 const frozenGeneratorInputSHA256 = "7bb267ce5f553848f6ecb97e092232ccc7c6d5eb4bdacdef3dcf52eafbfeeeb3"
 
+//nolint:gocyclo // One table-like contract assertion intentionally checks every pinned field.
 func TestGeneratedMfaContractPin(t *testing.T) {
 	raw, err := os.ReadFile("api/contract-pin.yaml")
 	if err != nil {

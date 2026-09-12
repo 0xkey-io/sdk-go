@@ -61,9 +61,15 @@
     }
   ],
   "host": "api.0xkey.io",
-  "schemes": ["https"],
-  "consumes": ["application/json"],
-  "produces": ["application/json"],
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
     "/public/v1/query/get_activity": {
       "post": {
@@ -88,7 +94,9 @@
             }
           }
         ],
-        "tags": ["Activities"]
+        "tags": [
+          "Activities"
+        ]
       }
     },
     "/public/v1/query/get_api_key": {
@@ -114,7 +122,9 @@
             }
           }
         ],
-        "tags": ["API keys"]
+        "tags": [
+          "API keys"
+        ]
       }
     },
     "/public/v1/query/get_api_keys": {
@@ -140,7 +150,9 @@
             }
           }
         ],
-        "tags": ["API keys"]
+        "tags": [
+          "API keys"
+        ]
       }
     },
     "/public/v1/query/get_authenticator": {
@@ -166,13 +178,15 @@
             }
           }
         ],
-        "tags": ["Authenticators"]
+        "tags": [
+          "Authenticators"
+        ]
       }
     },
-        "/public/v1/query/get_attestation": {
+    "/public/v1/query/get_attestation": {
       "post": {
         "summary": "Attestation",
-        "description": "Get the raw AWS Nitro attestation document (COSE Sign1) for a live enclave app. Prefers a fresh NSM attestation via qos_host; falls back to the latest stored boot proof. For full pivot\u2194quorum-manifest verification prefer get_latest_boot_proof + client-side verifyBootProof.",
+        "description": "Get the raw AWS Nitro attestation document (COSE Sign1) for a live enclave app. Prefers a fresh NSM attestation via qos_host; falls back to the latest stored boot proof. For full pivot↔quorum-manifest verification prefer get_latest_boot_proof + client-side verifyBootProof.",
         "operationId": "PublicApiService_GetAttestationDocument",
         "responses": {
           "200": {
@@ -203,7 +217,7 @@
         ]
       }
     },
-"/public/v1/query/get_authenticators": {
+    "/public/v1/query/get_authenticators": {
       "post": {
         "summary": "Get authenticators",
         "description": "Get details about authenticators for a user.",
@@ -226,7 +240,9 @@
             }
           }
         ],
-        "tags": ["Authenticators"]
+        "tags": [
+          "Authenticators"
+        ]
       }
     },
     "/public/v1/query/get_boot_proof": {
@@ -252,7 +268,9 @@
             }
           }
         ],
-        "tags": ["Boot Proof"]
+        "tags": [
+          "Boot Proof"
+        ]
       }
     },
     "/public/v1/query/get_gas_usage": {
@@ -278,7 +296,9 @@
             }
           }
         ],
-        "tags": ["Broadcasting"]
+        "tags": [
+          "Broadcasting"
+        ]
       }
     },
     "/public/v1/query/get_latest_boot_proof": {
@@ -304,7 +324,9 @@
             }
           }
         ],
-        "tags": ["Boot Proof"]
+        "tags": [
+          "Boot Proof"
+        ]
       }
     },
     "/public/v1/query/get_nonces": {
@@ -330,7 +352,9 @@
             }
           }
         ],
-        "tags": ["Broadcasting"]
+        "tags": [
+          "Broadcasting"
+        ]
       }
     },
     "/public/v1/query/get_oauth2_credential": {
@@ -381,7 +405,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/query/get_onramp_transaction_status": {
@@ -407,7 +433,9 @@
             }
           }
         ],
-        "tags": ["On Ramp"]
+        "tags": [
+          "On Ramp"
+        ]
       }
     },
     "/public/v1/query/get_organization_configs": {
@@ -433,7 +461,9 @@
             }
           }
         ],
-        "tags": ["Organizations"]
+        "tags": [
+          "Organizations"
+        ]
       }
     },
     "/public/v1/query/get_policy": {
@@ -459,7 +489,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/query/get_policy_evaluations": {
@@ -485,7 +517,9 @@
             }
           }
         ],
-        "tags": ["Activities"]
+        "tags": [
+          "Activities"
+        ]
       }
     },
     "/public/v1/query/get_private_key": {
@@ -511,7 +545,9 @@
             }
           }
         ],
-        "tags": ["Private Keys"]
+        "tags": [
+          "Private Keys"
+        ]
       }
     },
     "/public/v1/query/get_send_transaction_status": {
@@ -537,7 +573,9 @@
             }
           }
         ],
-        "tags": ["Send Transactions"]
+        "tags": [
+          "Send Transactions"
+        ]
       }
     },
     "/public/v1/query/get_smart_contract_interface": {
@@ -563,7 +601,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/query/get_user": {
@@ -589,7 +629,9 @@
             }
           }
         ],
-        "tags": ["Users"]
+        "tags": [
+          "Users"
+        ]
       }
     },
     "/public/v1/query/get_wallet": {
@@ -615,7 +657,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/query/get_wallet_account": {
@@ -641,7 +685,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/query/get_wallet_address_balances": {
@@ -667,7 +713,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/query/list_activities": {
@@ -693,7 +741,9 @@
             }
           }
         ],
-        "tags": ["Activities"]
+        "tags": [
+          "Activities"
+        ]
       }
     },
     "/public/v1/query/list_app_proofs": {
@@ -719,7 +769,9 @@
             }
           }
         ],
-        "tags": ["App Proof"]
+        "tags": [
+          "App Proof"
+        ]
       }
     },
     "/public/v1/query/list_fiat_on_ramp_credentials": {
@@ -745,7 +797,9 @@
             }
           }
         ],
-        "tags": ["On Ramp"]
+        "tags": [
+          "On Ramp"
+        ]
       }
     },
     "/public/v1/query/list_oauth2_credentials": {
@@ -771,7 +825,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/query/list_policies": {
@@ -797,7 +853,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/query/list_private_key_tags": {
@@ -823,7 +881,9 @@
             }
           }
         ],
-        "tags": ["Private Key Tags"]
+        "tags": [
+          "Private Key Tags"
+        ]
       }
     },
     "/public/v1/query/list_private_keys": {
@@ -849,7 +909,9 @@
             }
           }
         ],
-        "tags": ["Private Keys"]
+        "tags": [
+          "Private Keys"
+        ]
       }
     },
     "/public/v1/query/list_smart_contract_interfaces": {
@@ -875,7 +937,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/query/list_suborgs": {
@@ -901,7 +965,9 @@
             }
           }
         ],
-        "tags": ["Organizations"]
+        "tags": [
+          "Organizations"
+        ]
       }
     },
     "/public/v1/query/list_supported_assets": {
@@ -927,7 +993,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/query/list_user_tags": {
@@ -953,7 +1021,9 @@
             }
           }
         ],
-        "tags": ["User Tags"]
+        "tags": [
+          "User Tags"
+        ]
       }
     },
     "/public/v1/query/list_users": {
@@ -979,7 +1049,9 @@
             }
           }
         ],
-        "tags": ["Users"]
+        "tags": [
+          "Users"
+        ]
       }
     },
     "/public/v1/query/list_verified_suborgs": {
@@ -1005,7 +1077,9 @@
             }
           }
         ],
-        "tags": ["Organizations"]
+        "tags": [
+          "Organizations"
+        ]
       }
     },
     "/public/v1/query/list_wallet_accounts": {
@@ -1031,7 +1105,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/query/list_wallets": {
@@ -1057,7 +1133,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/query/whoami": {
@@ -1083,7 +1161,9 @@
             }
           }
         ],
-        "tags": ["Sessions"]
+        "tags": [
+          "Sessions"
+        ]
       }
     },
     "/public/v1/submit/approve_activity": {
@@ -1109,7 +1189,9 @@
             }
           }
         ],
-        "tags": ["Consensus"]
+        "tags": [
+          "Consensus"
+        ]
       }
     },
     "/public/v1/submit/create_api_keys": {
@@ -1135,7 +1217,9 @@
             }
           }
         ],
-        "tags": ["API Keys"]
+        "tags": [
+          "API Keys"
+        ]
       }
     },
     "/public/v1/submit/create_authenticators": {
@@ -1161,7 +1245,9 @@
             }
           }
         ],
-        "tags": ["Authenticators"]
+        "tags": [
+          "Authenticators"
+        ]
       }
     },
     "/public/v1/submit/create_fiat_on_ramp_credential": {
@@ -1187,7 +1273,9 @@
             }
           }
         ],
-        "tags": ["On Ramp"]
+        "tags": [
+          "On Ramp"
+        ]
       }
     },
     "/public/v1/submit/create_invitations": {
@@ -1213,7 +1301,9 @@
             }
           }
         ],
-        "tags": ["Invitations"]
+        "tags": [
+          "Invitations"
+        ]
       }
     },
     "/public/v1/submit/create_oauth2_credential": {
@@ -1239,7 +1329,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/create_oauth_providers": {
@@ -1265,7 +1357,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/create_policies": {
@@ -1291,7 +1385,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/submit/create_policy": {
@@ -1317,7 +1413,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/submit/create_private_key_tag": {
@@ -1343,7 +1441,9 @@
             }
           }
         ],
-        "tags": ["Private Key Tags"]
+        "tags": [
+          "Private Key Tags"
+        ]
       }
     },
     "/public/v1/submit/create_private_keys": {
@@ -1369,7 +1469,9 @@
             }
           }
         ],
-        "tags": ["Private Keys"]
+        "tags": [
+          "Private Keys"
+        ]
       }
     },
     "/public/v1/submit/create_read_only_session": {
@@ -1395,7 +1497,9 @@
             }
           }
         ],
-        "tags": ["Sessions"]
+        "tags": [
+          "Sessions"
+        ]
       }
     },
     "/public/v1/submit/create_read_write_session": {
@@ -1421,7 +1525,9 @@
             }
           }
         ],
-        "tags": ["Sessions"]
+        "tags": [
+          "Sessions"
+        ]
       }
     },
     "/public/v1/submit/create_smart_contract_interface": {
@@ -1447,7 +1553,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/submit/create_sub_organization": {
@@ -1473,7 +1581,9 @@
             }
           }
         ],
-        "tags": ["Organizations"]
+        "tags": [
+          "Organizations"
+        ]
       }
     },
     "/public/v1/submit/create_user_tag": {
@@ -1499,7 +1609,9 @@
             }
           }
         ],
-        "tags": ["User Tags"]
+        "tags": [
+          "User Tags"
+        ]
       }
     },
     "/public/v1/submit/create_users": {
@@ -1525,7 +1637,9 @@
             }
           }
         ],
-        "tags": ["Users"]
+        "tags": [
+          "Users"
+        ]
       }
     },
     "/public/v1/submit/create_wallet": {
@@ -1551,7 +1665,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/create_wallet_accounts": {
@@ -1577,7 +1693,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/delete_api_keys": {
@@ -1603,7 +1721,9 @@
             }
           }
         ],
-        "tags": ["API Keys"]
+        "tags": [
+          "API Keys"
+        ]
       }
     },
     "/public/v1/submit/delete_authenticators": {
@@ -1629,7 +1749,9 @@
             }
           }
         ],
-        "tags": ["Authenticators"]
+        "tags": [
+          "Authenticators"
+        ]
       }
     },
     "/public/v1/submit/delete_fiat_on_ramp_credential": {
@@ -1655,7 +1777,9 @@
             }
           }
         ],
-        "tags": ["On Ramp"]
+        "tags": [
+          "On Ramp"
+        ]
       }
     },
     "/public/v1/submit/delete_invitation": {
@@ -1681,7 +1805,9 @@
             }
           }
         ],
-        "tags": ["Invitations"]
+        "tags": [
+          "Invitations"
+        ]
       }
     },
     "/public/v1/submit/delete_oauth2_credential": {
@@ -1707,7 +1833,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/delete_oauth_providers": {
@@ -1733,7 +1861,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/delete_policies": {
@@ -1759,7 +1889,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/submit/delete_policy": {
@@ -1785,7 +1917,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/submit/delete_private_key_tags": {
@@ -1811,7 +1945,9 @@
             }
           }
         ],
-        "tags": ["Private Key Tags"]
+        "tags": [
+          "Private Key Tags"
+        ]
       }
     },
     "/public/v1/submit/delete_private_keys": {
@@ -1837,7 +1973,9 @@
             }
           }
         ],
-        "tags": ["Private Keys"]
+        "tags": [
+          "Private Keys"
+        ]
       }
     },
     "/public/v1/submit/delete_smart_contract_interface": {
@@ -1863,7 +2001,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/submit/delete_sub_organization": {
@@ -1889,7 +2029,9 @@
             }
           }
         ],
-        "tags": ["Organizations"]
+        "tags": [
+          "Organizations"
+        ]
       }
     },
     "/public/v1/submit/delete_user_tags": {
@@ -1915,7 +2057,9 @@
             }
           }
         ],
-        "tags": ["User Tags"]
+        "tags": [
+          "User Tags"
+        ]
       }
     },
     "/public/v1/submit/delete_users": {
@@ -1941,7 +2085,9 @@
             }
           }
         ],
-        "tags": ["Users"]
+        "tags": [
+          "Users"
+        ]
       }
     },
     "/public/v1/submit/delete_wallet_accounts": {
@@ -1967,7 +2113,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/delete_wallets": {
@@ -1993,7 +2141,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/email_auth": {
@@ -2019,7 +2169,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/eth_send_transaction": {
@@ -2045,7 +2197,9 @@
             }
           }
         ],
-        "tags": ["Broadcasting"]
+        "tags": [
+          "Broadcasting"
+        ]
       }
     },
     "/public/v1/submit/export_private_key": {
@@ -2071,7 +2225,9 @@
             }
           }
         ],
-        "tags": ["Private Keys"]
+        "tags": [
+          "Private Keys"
+        ]
       }
     },
     "/public/v1/submit/export_wallet": {
@@ -2097,7 +2253,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/export_wallet_account": {
@@ -2123,7 +2281,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/import_private_key": {
@@ -2149,7 +2309,9 @@
             }
           }
         ],
-        "tags": ["Private Keys"]
+        "tags": [
+          "Private Keys"
+        ]
       }
     },
     "/public/v1/submit/import_wallet": {
@@ -2175,7 +2337,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/init_fiat_on_ramp": {
@@ -2201,7 +2365,9 @@
             }
           }
         ],
-        "tags": ["On Ramp"]
+        "tags": [
+          "On Ramp"
+        ]
       }
     },
     "/public/v1/submit/init_import_private_key": {
@@ -2227,7 +2393,9 @@
             }
           }
         ],
-        "tags": ["Private Keys"]
+        "tags": [
+          "Private Keys"
+        ]
       }
     },
     "/public/v1/submit/init_import_wallet": {
@@ -2253,7 +2421,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/init_otp": {
@@ -2279,7 +2449,9 @@
             }
           }
         ],
-        "tags": ["User Verification"]
+        "tags": [
+          "User Verification"
+        ]
       }
     },
     "/public/v1/submit/init_otp_auth": {
@@ -2305,7 +2477,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/init_user_email_recovery": {
@@ -2331,7 +2505,9 @@
             }
           }
         ],
-        "tags": ["User Recovery"]
+        "tags": [
+          "User Recovery"
+        ]
       }
     },
     "/public/v1/submit/oauth": {
@@ -2357,7 +2533,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/oauth2_authenticate": {
@@ -2383,7 +2561,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/oauth_login": {
@@ -2409,7 +2589,9 @@
             }
           }
         ],
-        "tags": ["Sessions"]
+        "tags": [
+          "Sessions"
+        ]
       }
     },
     "/public/v1/submit/otp_auth": {
@@ -2435,7 +2617,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/otp_login": {
@@ -2461,7 +2645,9 @@
             }
           }
         ],
-        "tags": ["Sessions"]
+        "tags": [
+          "Sessions"
+        ]
       }
     },
     "/public/v1/submit/recover_user": {
@@ -2487,7 +2673,9 @@
             }
           }
         ],
-        "tags": ["User Recovery"]
+        "tags": [
+          "User Recovery"
+        ]
       }
     },
     "/public/v1/submit/reject_activity": {
@@ -2513,7 +2701,9 @@
             }
           }
         ],
-        "tags": ["Consensus"]
+        "tags": [
+          "Consensus"
+        ]
       }
     },
     "/public/v1/submit/remove_organization_feature": {
@@ -2539,7 +2729,9 @@
             }
           }
         ],
-        "tags": ["Features"]
+        "tags": [
+          "Features"
+        ]
       }
     },
     "/public/v1/submit/set_organization_feature": {
@@ -2565,7 +2757,9 @@
             }
           }
         ],
-        "tags": ["Features"]
+        "tags": [
+          "Features"
+        ]
       }
     },
     "/public/v1/submit/sign_raw_payload": {
@@ -2591,7 +2785,9 @@
             }
           }
         ],
-        "tags": ["Signing"]
+        "tags": [
+          "Signing"
+        ]
       }
     },
     "/public/v1/submit/sign_raw_payloads": {
@@ -2617,7 +2813,9 @@
             }
           }
         ],
-        "tags": ["Signing"]
+        "tags": [
+          "Signing"
+        ]
       }
     },
     "/public/v1/submit/sign_transaction": {
@@ -2643,7 +2841,9 @@
             }
           }
         ],
-        "tags": ["Signing"]
+        "tags": [
+          "Signing"
+        ]
       }
     },
     "/public/v1/submit/sol_send_transaction": {
@@ -2669,7 +2869,9 @@
             }
           }
         ],
-        "tags": ["Broadcasting"]
+        "tags": [
+          "Broadcasting"
+        ]
       }
     },
     "/public/v1/submit/stamp_login": {
@@ -2695,7 +2897,9 @@
             }
           }
         ],
-        "tags": ["Sessions"]
+        "tags": [
+          "Sessions"
+        ]
       }
     },
     "/public/v1/submit/update_fiat_on_ramp_credential": {
@@ -2721,7 +2925,9 @@
             }
           }
         ],
-        "tags": ["On Ramp"]
+        "tags": [
+          "On Ramp"
+        ]
       }
     },
     "/public/v1/submit/update_oauth2_credential": {
@@ -2747,7 +2953,9 @@
             }
           }
         ],
-        "tags": ["User Auth"]
+        "tags": [
+          "User Auth"
+        ]
       }
     },
     "/public/v1/submit/update_policy": {
@@ -2773,7 +2981,9 @@
             }
           }
         ],
-        "tags": ["Policies"]
+        "tags": [
+          "Policies"
+        ]
       }
     },
     "/public/v1/submit/update_private_key_tag": {
@@ -2799,7 +3009,9 @@
             }
           }
         ],
-        "tags": ["Private Key Tags"]
+        "tags": [
+          "Private Key Tags"
+        ]
       }
     },
     "/public/v1/submit/update_root_quorum": {
@@ -2825,7 +3037,9 @@
             }
           }
         ],
-        "tags": ["Organizations"]
+        "tags": [
+          "Organizations"
+        ]
       }
     },
     "/public/v1/submit/update_user": {
@@ -2851,7 +3065,9 @@
             }
           }
         ],
-        "tags": ["Users"]
+        "tags": [
+          "Users"
+        ]
       }
     },
     "/public/v1/submit/update_user_email": {
@@ -2877,7 +3093,9 @@
             }
           }
         ],
-        "tags": ["Users"]
+        "tags": [
+          "Users"
+        ]
       }
     },
     "/public/v1/submit/update_user_name": {
@@ -2903,7 +3121,9 @@
             }
           }
         ],
-        "tags": ["Users"]
+        "tags": [
+          "Users"
+        ]
       }
     },
     "/public/v1/submit/update_user_phone_number": {
@@ -2929,7 +3149,9 @@
             }
           }
         ],
-        "tags": ["Users"]
+        "tags": [
+          "Users"
+        ]
       }
     },
     "/public/v1/submit/update_user_tag": {
@@ -2955,7 +3177,9 @@
             }
           }
         ],
-        "tags": ["User Tags"]
+        "tags": [
+          "User Tags"
+        ]
       }
     },
     "/public/v1/submit/update_wallet": {
@@ -2981,7 +3205,9 @@
             }
           }
         ],
-        "tags": ["Wallets"]
+        "tags": [
+          "Wallets"
+        ]
       }
     },
     "/public/v1/submit/verify_otp": {
@@ -3007,7 +3233,9 @@
             }
           }
         ],
-        "tags": ["User Verification"]
+        "tags": [
+          "User Verification"
+        ]
       }
     },
     "/0xkey-io/api/v1/noop-codegen-anchor": {
@@ -3021,6 +3249,258 @@
             }
           }
         }
+      }
+    },
+    "/public/v1/query/get_mfa_status": {
+      "post": {
+        "summary": "Get MFA status",
+        "description": "Get the MFA status of an activity for one user or all voting users.",
+        "operationId": "GetMfaStatus",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetMfaStatusResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetMfaStatusRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MFA Policies"
+        ]
+      }
+    },
+    "/public/v1/query/get_mfa_policies": {
+      "post": {
+        "summary": "Get MFA policies",
+        "description": "Get all MFA policies for a user.",
+        "operationId": "GetMfaPolicies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetMfaPoliciesResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetMfaPoliciesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MFA Policies"
+        ]
+      }
+    },
+    "/public/v1/query/get_mfa_policy": {
+      "post": {
+        "summary": "Get MFA policy",
+        "description": "Get a single MFA policy for a user.",
+        "operationId": "GetMfaPolicy",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetMfaPolicyResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetMfaPolicyRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MFA Policies"
+        ]
+      }
+    },
+    "/public/v1/query/get_session_profile": {
+      "post": {
+        "summary": "Get session profile",
+        "description": "Get one session profile for an organization.",
+        "operationId": "GetSessionProfile",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetSessionProfileResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetSessionProfileRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Session Profiles"
+        ]
+      }
+    },
+    "/public/v1/query/get_session_profiles": {
+      "post": {
+        "summary": "Get session profiles",
+        "description": "Get all session profiles for an organization.",
+        "operationId": "GetSessionProfiles",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetSessionProfilesResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetSessionProfilesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Session Profiles"
+        ]
+      }
+    },
+    "/public/v1/submit/create_mfa_policy": {
+      "post": {
+        "summary": "Create MFA policy",
+        "description": "Create a new MFA policy for a user.",
+        "operationId": "CreateMfaPolicy",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ActivityResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateMfaPolicyRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MFA Policies"
+        ]
+      }
+    },
+    "/public/v1/submit/update_mfa_policy": {
+      "post": {
+        "summary": "Update MFA policy",
+        "description": "Update an MFA policy for a user.",
+        "operationId": "UpdateMfaPolicy",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ActivityResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateMfaPolicyRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MFA Policies"
+        ]
+      }
+    },
+    "/public/v1/submit/delete_mfa_policy": {
+      "post": {
+        "summary": "Delete MFA policy",
+        "description": "Delete an MFA policy for a user.",
+        "operationId": "DeleteMfaPolicy",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ActivityResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteMfaPolicyRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MFA Policies"
+        ]
+      }
+    },
+    "/public/v1/submit/create_session_profile": {
+      "post": {
+        "summary": "Create session profile",
+        "description": "Create a new session profile for an organization.",
+        "operationId": "CreateSessionProfile",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ActivityResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateSessionProfileRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Session Profiles"
+        ]
       }
     }
   },
@@ -3071,7 +3551,11 @@
           "description": "WebAuthN hardware devices that can be used to log in to the 0xkey web app."
         }
       },
-      "required": ["invitationId", "userId", "authenticator"]
+      "required": [
+        "invitationId",
+        "userId",
+        "authenticator"
+      ]
     },
     "AcceptInvitationIntentV2": {
       "type": "object",
@@ -3089,7 +3573,11 @@
           "description": "WebAuthN hardware devices that can be used to log in to the 0xkey web app."
         }
       },
-      "required": ["invitationId", "userId", "authenticator"]
+      "required": [
+        "invitationId",
+        "userId",
+        "authenticator"
+      ]
     },
     "AcceptInvitationResult": {
       "type": "object",
@@ -3103,11 +3591,18 @@
           "description": "Unique identifier for a given User."
         }
       },
-      "required": ["invitationId", "userId"]
+      "required": [
+        "invitationId",
+        "userId"
+      ]
     },
     "AccessType": {
       "type": "string",
-      "enum": ["ACCESS_TYPE_WEB", "ACCESS_TYPE_API", "ACCESS_TYPE_ALL"]
+      "enum": [
+        "ACCESS_TYPE_WEB",
+        "ACCESS_TYPE_API",
+        "ACCESS_TYPE_ALL"
+      ]
     },
     "ActivateBillingTierIntent": {
       "type": "object",
@@ -3117,7 +3612,9 @@
           "description": "The product that the customer wants to subscribe to."
         }
       },
-      "required": ["productId"]
+      "required": [
+        "productId"
+      ]
     },
     "ActivateBillingTierResult": {
       "type": "object",
@@ -3127,7 +3624,9 @@
           "description": "The id of the product being subscribed to."
         }
       },
-      "required": ["productId"]
+      "required": [
+        "productId"
+      ]
     },
     "Activity": {
       "type": "object",
@@ -3216,7 +3715,9 @@
           "description": "An action that can be taken within the 0xkey infrastructure."
         }
       },
-      "required": ["activity"]
+      "required": [
+        "activity"
+      ]
     },
     "ActivityStatus": {
       "type": "string",
@@ -3226,7 +3727,8 @@
         "ACTIVITY_STATUS_COMPLETED",
         "ACTIVITY_STATUS_FAILED",
         "ACTIVITY_STATUS_CONSENSUS_NEEDED",
-        "ACTIVITY_STATUS_REJECTED"
+        "ACTIVITY_STATUS_REJECTED",
+        "ACTIVITY_STATUS_AUTHENTICATORS_NEEDED"
       ]
     },
     "ActivityType": {
@@ -3351,7 +3853,11 @@
         "ACTIVITY_TYPE_SOL_SEND_TRANSACTION",
         "ACTIVITY_TYPE_INIT_OTP_V3",
         "ACTIVITY_TYPE_VERIFY_OTP_V2",
-        "ACTIVITY_TYPE_OTP_LOGIN_V2"
+        "ACTIVITY_TYPE_OTP_LOGIN_V2",
+        "ACTIVITY_TYPE_CREATE_MFA_POLICY",
+        "ACTIVITY_TYPE_UPDATE_MFA_POLICY",
+        "ACTIVITY_TYPE_DELETE_MFA_POLICY",
+        "ACTIVITY_TYPE_CREATE_SESSION_PROFILE"
       ]
     },
     "AddressFormat": {
@@ -3465,7 +3971,10 @@
           "description": "Optional window (in seconds) indicating how long the API Key should last."
         }
       },
-      "required": ["apiKeyName", "publicKey"]
+      "required": [
+        "apiKeyName",
+        "publicKey"
+      ]
     },
     "ApiKeyParamsV2": {
       "type": "object",
@@ -3488,7 +3997,11 @@
           "description": "Optional window (in seconds) indicating how long the API Key should last."
         }
       },
-      "required": ["apiKeyName", "publicKey", "curveType"]
+      "required": [
+        "apiKeyName",
+        "publicKey",
+        "curveType"
+      ]
     },
     "ApiOnlyUserParams": {
       "type": "object",
@@ -3518,7 +4031,11 @@
           "description": "A list of API Key parameters. This field, if not needed, should be an empty array in your request body."
         }
       },
-      "required": ["userName", "userTags", "apiKeys"]
+      "required": [
+        "userName",
+        "userTags",
+        "apiKeys"
+      ]
     },
     "AppProof": {
       "type": "object",
@@ -3540,7 +4057,12 @@
           "description": "Signature over hashed proof_payload."
         }
       },
-      "required": ["scheme", "publicKey", "proofPayload", "signature"]
+      "required": [
+        "scheme",
+        "publicKey",
+        "proofPayload",
+        "signature"
+      ]
     },
     "ApproveActivityIntent": {
       "type": "object",
@@ -3550,14 +4072,18 @@
           "description": "An artifact verifying a User's action."
         }
       },
-      "required": ["fingerprint"]
+      "required": [
+        "fingerprint"
+      ]
     },
     "ApproveActivityRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_APPROVE_ACTIVITY"]
+          "enum": [
+            "ACTIVITY_TYPE_APPROVE_ACTIVITY"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -3575,7 +4101,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "AssetBalance": {
       "type": "object",
@@ -3750,11 +4281,17 @@
         },
         "authenticatorAttachment": {
           "type": "string",
-          "enum": ["cross-platform", "platform"],
+          "enum": [
+            "cross-platform",
+            "platform"
+          ],
           "x-nullable": true
         }
       },
-      "required": ["clientDataJson", "attestationObject"]
+      "required": [
+        "clientDataJson",
+        "attestationObject"
+      ]
     },
     "AuthenticatorParams": {
       "type": "object",
@@ -3775,7 +4312,12 @@
           "description": "Challenge presented for authentication purposes."
         }
       },
-      "required": ["authenticatorName", "userId", "attestation", "challenge"]
+      "required": [
+        "authenticatorName",
+        "userId",
+        "attestation",
+        "challenge"
+      ]
     },
     "AuthenticatorParamsV2": {
       "type": "object",
@@ -3793,7 +4335,11 @@
           "description": "The attestation that proves custody of the authenticator and provides metadata about it."
         }
       },
-      "required": ["authenticatorName", "challenge", "attestation"]
+      "required": [
+        "authenticatorName",
+        "challenge",
+        "attestation"
+      ]
     },
     "AuthenticatorTransport": {
       "type": "string",
@@ -3858,7 +4404,9 @@
           "$ref": "#/definitions/BootProof"
         }
       },
-      "required": ["bootProof"]
+      "required": [
+        "bootProof"
+      ]
     },
     "ClientSignature": {
       "type": "object",
@@ -3880,11 +4428,18 @@
           "description": "The cryptographic signature over the message."
         }
       },
-      "required": ["publicKey", "scheme", "message", "signature"]
+      "required": [
+        "publicKey",
+        "scheme",
+        "message",
+        "signature"
+      ]
     },
     "ClientSignatureScheme": {
       "type": "string",
-      "enum": ["CLIENT_SIGNATURE_SCHEME_API_P256"]
+      "enum": [
+        "CLIENT_SIGNATURE_SCHEME_API_P256"
+      ]
     },
     "Config": {
       "type": "object",
@@ -3917,7 +4472,10 @@
           "description": "Unique identifier for a given User."
         }
       },
-      "required": ["apiKeys", "userId"]
+      "required": [
+        "apiKeys",
+        "userId"
+      ]
     },
     "CreateApiKeysIntentV2": {
       "type": "object",
@@ -3935,14 +4493,19 @@
           "description": "Unique identifier for a given User."
         }
       },
-      "required": ["apiKeys", "userId"]
+      "required": [
+        "apiKeys",
+        "userId"
+      ]
     },
     "CreateApiKeysRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_API_KEYS_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_API_KEYS_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -3960,7 +4523,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateApiKeysResult": {
       "type": "object",
@@ -3973,7 +4541,9 @@
           "description": "A list of API Key IDs."
         }
       },
-      "required": ["apiKeyIds"]
+      "required": [
+        "apiKeyIds"
+      ]
     },
     "CreateApiOnlyUsersIntent": {
       "type": "object",
@@ -3987,7 +4557,9 @@
           "description": "A list of API-only Users to create."
         }
       },
-      "required": ["apiOnlyUsers"]
+      "required": [
+        "apiOnlyUsers"
+      ]
     },
     "CreateApiOnlyUsersResult": {
       "type": "object",
@@ -4000,7 +4572,9 @@
           "description": "A list of API-only User IDs."
         }
       },
-      "required": ["userIds"]
+      "required": [
+        "userIds"
+      ]
     },
     "CreateAuthenticatorsIntent": {
       "type": "object",
@@ -4018,7 +4592,10 @@
           "description": "Unique identifier for a given User."
         }
       },
-      "required": ["authenticators", "userId"]
+      "required": [
+        "authenticators",
+        "userId"
+      ]
     },
     "CreateAuthenticatorsIntentV2": {
       "type": "object",
@@ -4036,14 +4613,19 @@
           "description": "Unique identifier for a given User."
         }
       },
-      "required": ["authenticators", "userId"]
+      "required": [
+        "authenticators",
+        "userId"
+      ]
     },
     "CreateAuthenticatorsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_AUTHENTICATORS_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_AUTHENTICATORS_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4061,7 +4643,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateAuthenticatorsResult": {
       "type": "object",
@@ -4074,7 +4661,9 @@
           "description": "A list of Authenticator IDs."
         }
       },
-      "required": ["authenticatorIds"]
+      "required": [
+        "authenticatorIds"
+      ]
     },
     "CreateFiatOnRampCredentialIntent": {
       "type": "object",
@@ -4117,7 +4706,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_FIAT_ON_RAMP_CREDENTIAL"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_FIAT_ON_RAMP_CREDENTIAL"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4135,7 +4726,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateFiatOnRampCredentialResult": {
       "type": "object",
@@ -4145,7 +4741,9 @@
           "description": "Unique identifier of the Fiat On-Ramp credential that was created"
         }
       },
-      "required": ["fiatOnRampCredentialId"]
+      "required": [
+        "fiatOnRampCredentialId"
+      ]
     },
     "CreateInvitationsIntent": {
       "type": "object",
@@ -4159,14 +4757,18 @@
           "description": "A list of Invitations."
         }
       },
-      "required": ["invitations"]
+      "required": [
+        "invitations"
+      ]
     },
     "CreateInvitationsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_INVITATIONS"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_INVITATIONS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4184,7 +4786,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateInvitationsResult": {
       "type": "object",
@@ -4197,7 +4804,9 @@
           "description": "A list of Invitation IDs"
         }
       },
-      "required": ["invitationIds"]
+      "required": [
+        "invitationIds"
+      ]
     },
     "CreateOauth2CredentialIntent": {
       "type": "object",
@@ -4215,14 +4824,20 @@
           "description": "The client secret issued by the OAuth 2.0 provider encrypted to the TLS Fetcher quorum key"
         }
       },
-      "required": ["provider", "clientId", "encryptedClientSecret"]
+      "required": [
+        "provider",
+        "clientId",
+        "encryptedClientSecret"
+      ]
     },
     "CreateOauth2CredentialRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_OAUTH2_CREDENTIAL"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_OAUTH2_CREDENTIAL"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4240,7 +4855,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateOauth2CredentialResult": {
       "type": "object",
@@ -4250,7 +4870,9 @@
           "description": "Unique identifier of the OAuth 2.0 credential that was created"
         }
       },
-      "required": ["oauth2CredentialId"]
+      "required": [
+        "oauth2CredentialId"
+      ]
     },
     "CreateOauthProvidersIntent": {
       "type": "object",
@@ -4268,14 +4890,19 @@
           "description": "A list of Oauth providers."
         }
       },
-      "required": ["userId", "oauthProviders"]
+      "required": [
+        "userId",
+        "oauthProviders"
+      ]
     },
     "CreateOauthProvidersRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_OAUTH_PROVIDERS"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_OAUTH_PROVIDERS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4293,7 +4920,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateOauthProvidersResult": {
       "type": "object",
@@ -4306,7 +4938,9 @@
           "description": "A list of unique identifiers for Oauth Providers"
         }
       },
-      "required": ["providerIds"]
+      "required": [
+        "providerIds"
+      ]
     },
     "CreateOrganizationIntent": {
       "type": "object",
@@ -4329,7 +4963,11 @@
           "description": "Unique identifier for the root user object."
         }
       },
-      "required": ["organizationName", "rootEmail", "rootAuthenticator"]
+      "required": [
+        "organizationName",
+        "rootEmail",
+        "rootAuthenticator"
+      ]
     },
     "CreateOrganizationIntentV2": {
       "type": "object",
@@ -4352,7 +4990,11 @@
           "description": "Unique identifier for the root user object."
         }
       },
-      "required": ["organizationName", "rootEmail", "rootAuthenticator"]
+      "required": [
+        "organizationName",
+        "rootEmail",
+        "rootAuthenticator"
+      ]
     },
     "CreateOrganizationResult": {
       "type": "object",
@@ -4362,7 +5004,9 @@
           "description": "Unique identifier for a given Organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "CreatePoliciesIntent": {
       "type": "object",
@@ -4376,14 +5020,18 @@
           "description": "An array of policy intents to be created."
         }
       },
-      "required": ["policies"]
+      "required": [
+        "policies"
+      ]
     },
     "CreatePoliciesRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_POLICIES"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_POLICIES"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4401,7 +5049,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreatePoliciesResult": {
       "type": "object",
@@ -4414,7 +5067,9 @@
           "description": "A list of unique identifiers for the created policies."
         }
       },
-      "required": ["policyIds"]
+      "required": [
+        "policyIds"
+      ]
     },
     "CreatePolicyIntent": {
       "type": "object",
@@ -4439,7 +5094,11 @@
           "type": "string"
         }
       },
-      "required": ["policyName", "selectors", "effect"]
+      "required": [
+        "policyName",
+        "selectors",
+        "effect"
+      ]
     },
     "CreatePolicyIntentV2": {
       "type": "object",
@@ -4464,7 +5123,11 @@
           "type": "string"
         }
       },
-      "required": ["policyName", "selectors", "effect"]
+      "required": [
+        "policyName",
+        "selectors",
+        "effect"
+      ]
     },
     "CreatePolicyIntentV3": {
       "type": "object",
@@ -4492,14 +5155,20 @@
           "description": "Notes for a Policy."
         }
       },
-      "required": ["policyName", "effect", "notes"]
+      "required": [
+        "policyName",
+        "effect",
+        "notes"
+      ]
     },
     "CreatePolicyRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_POLICY_V3"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_POLICY_V3"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4517,7 +5186,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreatePolicyResult": {
       "type": "object",
@@ -4527,7 +5201,9 @@
           "description": "Unique identifier for a given Policy."
         }
       },
-      "required": ["policyId"]
+      "required": [
+        "policyId"
+      ]
     },
     "CreatePrivateKeyTagIntent": {
       "type": "object",
@@ -4544,14 +5220,19 @@
           "description": "A list of Private Key IDs."
         }
       },
-      "required": ["privateKeyTagName", "privateKeyIds"]
+      "required": [
+        "privateKeyTagName",
+        "privateKeyIds"
+      ]
     },
     "CreatePrivateKeyTagRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_PRIVATE_KEY_TAG"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_PRIVATE_KEY_TAG"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4569,7 +5250,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreatePrivateKeyTagResult": {
       "type": "object",
@@ -4586,7 +5272,10 @@
           "description": "A list of Private Key IDs."
         }
       },
-      "required": ["privateKeyTagId", "privateKeyIds"]
+      "required": [
+        "privateKeyTagId",
+        "privateKeyIds"
+      ]
     },
     "CreatePrivateKeysIntent": {
       "type": "object",
@@ -4600,7 +5289,9 @@
           "description": "A list of Private Keys."
         }
       },
-      "required": ["privateKeys"]
+      "required": [
+        "privateKeys"
+      ]
     },
     "CreatePrivateKeysIntentV2": {
       "type": "object",
@@ -4614,14 +5305,18 @@
           "description": "A list of Private Keys."
         }
       },
-      "required": ["privateKeys"]
+      "required": [
+        "privateKeys"
+      ]
     },
     "CreatePrivateKeysRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_PRIVATE_KEYS_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_PRIVATE_KEYS_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4639,7 +5334,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreatePrivateKeysResult": {
       "type": "object",
@@ -4652,7 +5352,9 @@
           "description": "A list of Private Key IDs."
         }
       },
-      "required": ["privateKeyIds"]
+      "required": [
+        "privateKeyIds"
+      ]
     },
     "CreatePrivateKeysResultV2": {
       "type": "object",
@@ -4666,7 +5368,9 @@
           "description": "A list of Private Key IDs and addresses."
         }
       },
-      "required": ["privateKeys"]
+      "required": [
+        "privateKeys"
+      ]
     },
     "CreateReadOnlySessionIntent": {
       "type": "object"
@@ -4676,7 +5380,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_READ_ONLY_SESSION"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_READ_ONLY_SESSION"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4694,7 +5400,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateReadOnlySessionResult": {
       "type": "object",
@@ -4748,7 +5459,7 @@
         "apiKeyName": {
           "type": "string",
           "x-nullable": true,
-          "description": "Optional human-readable name for an API Key. If none provided, default to Read Write Session - \u003cTimestamp\u003e"
+          "description": "Optional human-readable name for an API Key. If none provided, default to Read Write Session - <Timestamp>"
         },
         "expirationSeconds": {
           "type": "string",
@@ -4756,7 +5467,10 @@
           "description": "Expiration window (in seconds) indicating how long the API key is valid for. If not provided, a default of 15 minutes will be used."
         }
       },
-      "required": ["targetPublicKey", "email"]
+      "required": [
+        "targetPublicKey",
+        "email"
+      ]
     },
     "CreateReadWriteSessionIntentV2": {
       "type": "object",
@@ -4773,7 +5487,7 @@
         "apiKeyName": {
           "type": "string",
           "x-nullable": true,
-          "description": "Optional human-readable name for an API Key. If none provided, default to Read Write Session - \u003cTimestamp\u003e"
+          "description": "Optional human-readable name for an API Key. If none provided, default to Read Write Session - <Timestamp>"
         },
         "expirationSeconds": {
           "type": "string",
@@ -4786,14 +5500,18 @@
           "description": "Invalidate all other previously generated ReadWriteSession API keys"
         }
       },
-      "required": ["targetPublicKey"]
+      "required": [
+        "targetPublicKey"
+      ]
     },
     "CreateReadWriteSessionRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_READ_WRITE_SESSION_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_READ_WRITE_SESSION_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4811,7 +5529,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateReadWriteSessionResult": {
       "type": "object",
@@ -4922,7 +5645,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_SMART_CONTRACT_INTERFACE"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_SMART_CONTRACT_INTERFACE"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -4940,7 +5665,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateSmartContractInterfaceResult": {
       "type": "object",
@@ -4950,7 +5680,9 @@
           "description": "The ID of the created Smart Contract Interface."
         }
       },
-      "required": ["smartContractInterfaceId"]
+      "required": [
+        "smartContractInterfaceId"
+      ]
     },
     "CreateSubOrganizationIntent": {
       "type": "object",
@@ -4964,7 +5696,10 @@
           "description": "Root User authenticator for this new sub-organization"
         }
       },
-      "required": ["name", "rootAuthenticator"]
+      "required": [
+        "name",
+        "rootAuthenticator"
+      ]
     },
     "CreateSubOrganizationIntentV2": {
       "type": "object",
@@ -4987,7 +5722,11 @@
           "description": "The threshold of unique approvals to reach root quorum. This value must be less than or equal to the number of root users"
         }
       },
-      "required": ["subOrganizationName", "rootUsers", "rootQuorumThreshold"]
+      "required": [
+        "subOrganizationName",
+        "rootUsers",
+        "rootQuorumThreshold"
+      ]
     },
     "CreateSubOrganizationIntentV3": {
       "type": "object",
@@ -5061,7 +5800,11 @@
           "description": "Disable email auth for the sub-organization"
         }
       },
-      "required": ["subOrganizationName", "rootUsers", "rootQuorumThreshold"]
+      "required": [
+        "subOrganizationName",
+        "rootUsers",
+        "rootQuorumThreshold"
+      ]
     },
     "CreateSubOrganizationIntentV5": {
       "type": "object",
@@ -5099,7 +5842,11 @@
           "description": "Disable email auth for the sub-organization"
         }
       },
-      "required": ["subOrganizationName", "rootUsers", "rootQuorumThreshold"]
+      "required": [
+        "subOrganizationName",
+        "rootUsers",
+        "rootQuorumThreshold"
+      ]
     },
     "CreateSubOrganizationIntentV6": {
       "type": "object",
@@ -5137,7 +5884,11 @@
           "description": "Disable email auth for the sub-organization"
         }
       },
-      "required": ["subOrganizationName", "rootUsers", "rootQuorumThreshold"]
+      "required": [
+        "subOrganizationName",
+        "rootUsers",
+        "rootQuorumThreshold"
+      ]
     },
     "CreateSubOrganizationIntentV7": {
       "type": "object",
@@ -5195,14 +5946,20 @@
           "description": "Optional signature proving authorization for this sub-organization creation. The signature is over the verification token ID and the root user parameters for the root user associated with the verification token. Only required if a public key was provided during the verification step."
         }
       },
-      "required": ["subOrganizationName", "rootUsers", "rootQuorumThreshold"]
+      "required": [
+        "subOrganizationName",
+        "rootUsers",
+        "rootQuorumThreshold"
+      ]
     },
     "CreateSubOrganizationRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_SUB_ORGANIZATION_V7"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_SUB_ORGANIZATION_V7"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -5220,7 +5977,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateSubOrganizationResult": {
       "type": "object",
@@ -5235,7 +5997,9 @@
           }
         }
       },
-      "required": ["subOrganizationId"]
+      "required": [
+        "subOrganizationId"
+      ]
     },
     "CreateSubOrganizationResultV3": {
       "type": "object",
@@ -5258,7 +6022,10 @@
           }
         }
       },
-      "required": ["subOrganizationId", "privateKeys"]
+      "required": [
+        "subOrganizationId",
+        "privateKeys"
+      ]
     },
     "CreateSubOrganizationResultV4": {
       "type": "object",
@@ -5277,7 +6044,9 @@
           }
         }
       },
-      "required": ["subOrganizationId"]
+      "required": [
+        "subOrganizationId"
+      ]
     },
     "CreateSubOrganizationResultV5": {
       "type": "object",
@@ -5296,7 +6065,9 @@
           }
         }
       },
-      "required": ["subOrganizationId"]
+      "required": [
+        "subOrganizationId"
+      ]
     },
     "CreateSubOrganizationResultV6": {
       "type": "object",
@@ -5315,7 +6086,9 @@
           }
         }
       },
-      "required": ["subOrganizationId"]
+      "required": [
+        "subOrganizationId"
+      ]
     },
     "CreateSubOrganizationResultV7": {
       "type": "object",
@@ -5334,7 +6107,9 @@
           }
         }
       },
-      "required": ["subOrganizationId"]
+      "required": [
+        "subOrganizationId"
+      ]
     },
     "CreateTvcAppIntent": {
       "type": "object",
@@ -5373,7 +6148,10 @@
           "description": "Enables external connectivity for this TVC app. Default if not provided: false."
         }
       },
-      "required": ["name", "quorumPublicKey"]
+      "required": [
+        "name",
+        "quorumPublicKey"
+      ]
     },
     "CreateTvcAppResult": {
       "type": "object",
@@ -5481,7 +6259,10 @@
           "description": "The unique identifier for the TVC manifest"
         }
       },
-      "required": ["deploymentId", "manifestId"]
+      "required": [
+        "deploymentId",
+        "manifestId"
+      ]
     },
     "CreateTvcManifestApprovalsIntent": {
       "type": "object",
@@ -5499,7 +6280,10 @@
           "description": "List of manifest approvals"
         }
       },
-      "required": ["manifestId", "approvals"]
+      "required": [
+        "manifestId",
+        "approvals"
+      ]
     },
     "CreateTvcManifestApprovalsResult": {
       "type": "object",
@@ -5512,7 +6296,9 @@
           "description": "The unique identifier(s) for the manifest approvals"
         }
       },
-      "required": ["approvalIds"]
+      "required": [
+        "approvalIds"
+      ]
     },
     "CreateUserTagIntent": {
       "type": "object",
@@ -5529,14 +6315,19 @@
           "description": "A list of User IDs."
         }
       },
-      "required": ["userTagName", "userIds"]
+      "required": [
+        "userTagName",
+        "userIds"
+      ]
     },
     "CreateUserTagRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_USER_TAG"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_USER_TAG"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -5554,7 +6345,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateUserTagResult": {
       "type": "object",
@@ -5571,7 +6367,10 @@
           "description": "A list of User IDs."
         }
       },
-      "required": ["userTagId", "userIds"]
+      "required": [
+        "userTagId",
+        "userIds"
+      ]
     },
     "CreateUsersIntent": {
       "type": "object",
@@ -5585,7 +6384,9 @@
           "description": "A list of Users."
         }
       },
-      "required": ["users"]
+      "required": [
+        "users"
+      ]
     },
     "CreateUsersIntentV2": {
       "type": "object",
@@ -5599,7 +6400,9 @@
           "description": "A list of Users."
         }
       },
-      "required": ["users"]
+      "required": [
+        "users"
+      ]
     },
     "CreateUsersIntentV3": {
       "type": "object",
@@ -5613,14 +6416,18 @@
           "description": "A list of Users."
         }
       },
-      "required": ["users"]
+      "required": [
+        "users"
+      ]
     },
     "CreateUsersRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_USERS_V3"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_USERS_V3"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -5638,7 +6445,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateUsersResult": {
       "type": "object",
@@ -5651,7 +6463,9 @@
           "description": "A list of User IDs."
         }
       },
-      "required": ["userIds"]
+      "required": [
+        "userIds"
+      ]
     },
     "CreateWalletAccountsIntent": {
       "type": "object",
@@ -5674,14 +6488,19 @@
           "description": "Indicates if the wallet accounts should be persisted. This is helpful if you'd like to see the addresses of different derivation paths without actually creating the accounts. Defaults to true."
         }
       },
-      "required": ["walletId", "accounts"]
+      "required": [
+        "walletId",
+        "accounts"
+      ]
     },
     "CreateWalletAccountsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_WALLET_ACCOUNTS"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_WALLET_ACCOUNTS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -5699,7 +6518,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateWalletAccountsResult": {
       "type": "object",
@@ -5712,7 +6536,9 @@
           "description": "A list of derived addresses."
         }
       },
-      "required": ["addresses"]
+      "required": [
+        "addresses"
+      ]
     },
     "CreateWalletIntent": {
       "type": "object",
@@ -5736,14 +6562,19 @@
           "description": "Length of mnemonic to generate the Wallet seed. Defaults to 12. Accepted values: 12, 15, 18, 21, 24."
         }
       },
-      "required": ["walletName", "accounts"]
+      "required": [
+        "walletName",
+        "accounts"
+      ]
     },
     "CreateWalletRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_CREATE_WALLET"]
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_WALLET"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -5761,7 +6592,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "CreateWalletResult": {
       "type": "object",
@@ -5778,7 +6614,10 @@
           "description": "A list of account addresses."
         }
       },
-      "required": ["walletId", "addresses"]
+      "required": [
+        "walletId",
+        "addresses"
+      ]
     },
     "CredPropsAuthenticationExtensionsClientOutputs": {
       "type": "object",
@@ -5787,7 +6626,9 @@
           "type": "boolean"
         }
       },
-      "required": ["rk"]
+      "required": [
+        "rk"
+      ]
     },
     "CredentialType": {
       "type": "string",
@@ -5806,7 +6647,11 @@
     },
     "Curve": {
       "type": "string",
-      "enum": ["CURVE_SECP256K1", "CURVE_ED25519", "CURVE_P256"]
+      "enum": [
+        "CURVE_SECP256K1",
+        "CURVE_ED25519",
+        "CURVE_P256"
+      ]
     },
     "CustomRevertError": {
       "type": "object",
@@ -5838,14 +6683,19 @@
           "description": "A list of API Key IDs."
         }
       },
-      "required": ["userId", "apiKeyIds"]
+      "required": [
+        "userId",
+        "apiKeyIds"
+      ]
     },
     "DeleteApiKeysRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_API_KEYS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_API_KEYS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -5863,7 +6713,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteApiKeysResult": {
       "type": "object",
@@ -5876,7 +6731,9 @@
           "description": "A list of API Key IDs."
         }
       },
-      "required": ["apiKeyIds"]
+      "required": [
+        "apiKeyIds"
+      ]
     },
     "DeleteAuthenticatorsIntent": {
       "type": "object",
@@ -5893,14 +6750,19 @@
           "description": "A list of Authenticator IDs."
         }
       },
-      "required": ["userId", "authenticatorIds"]
+      "required": [
+        "userId",
+        "authenticatorIds"
+      ]
     },
     "DeleteAuthenticatorsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_AUTHENTICATORS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_AUTHENTICATORS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -5918,7 +6780,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteAuthenticatorsResult": {
       "type": "object",
@@ -5931,7 +6798,9 @@
           "description": "Unique identifier for a given Authenticator."
         }
       },
-      "required": ["authenticatorIds"]
+      "required": [
+        "authenticatorIds"
+      ]
     },
     "DeleteFiatOnRampCredentialIntent": {
       "type": "object",
@@ -5941,14 +6810,18 @@
           "description": "The ID of the fiat on-ramp credential to delete"
         }
       },
-      "required": ["fiatOnrampCredentialId"]
+      "required": [
+        "fiatOnrampCredentialId"
+      ]
     },
     "DeleteFiatOnRampCredentialRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_FIAT_ON_RAMP_CREDENTIAL"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_FIAT_ON_RAMP_CREDENTIAL"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -5966,7 +6839,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteFiatOnRampCredentialResult": {
       "type": "object",
@@ -5976,7 +6854,9 @@
           "description": "Unique identifier of the Fiat On-Ramp credential that was deleted"
         }
       },
-      "required": ["fiatOnRampCredentialId"]
+      "required": [
+        "fiatOnRampCredentialId"
+      ]
     },
     "DeleteInvitationIntent": {
       "type": "object",
@@ -5986,14 +6866,18 @@
           "description": "Unique identifier for a given Invitation object."
         }
       },
-      "required": ["invitationId"]
+      "required": [
+        "invitationId"
+      ]
     },
     "DeleteInvitationRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_INVITATION"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_INVITATION"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6011,7 +6895,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteInvitationResult": {
       "type": "object",
@@ -6021,7 +6910,9 @@
           "description": "Unique identifier for a given Invitation."
         }
       },
-      "required": ["invitationId"]
+      "required": [
+        "invitationId"
+      ]
     },
     "DeleteOauth2CredentialIntent": {
       "type": "object",
@@ -6031,14 +6922,18 @@
           "description": "The ID of the OAuth 2.0 credential to delete"
         }
       },
-      "required": ["oauth2CredentialId"]
+      "required": [
+        "oauth2CredentialId"
+      ]
     },
     "DeleteOauth2CredentialRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_OAUTH2_CREDENTIAL"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_OAUTH2_CREDENTIAL"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6056,7 +6951,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteOauth2CredentialResult": {
       "type": "object",
@@ -6066,7 +6966,9 @@
           "description": "Unique identifier of the OAuth 2.0 credential that was deleted"
         }
       },
-      "required": ["oauth2CredentialId"]
+      "required": [
+        "oauth2CredentialId"
+      ]
     },
     "DeleteOauthProvidersIntent": {
       "type": "object",
@@ -6083,14 +6985,19 @@
           "description": "Unique identifier for a given Provider."
         }
       },
-      "required": ["userId", "providerIds"]
+      "required": [
+        "userId",
+        "providerIds"
+      ]
     },
     "DeleteOauthProvidersRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_OAUTH_PROVIDERS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_OAUTH_PROVIDERS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6108,7 +7015,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteOauthProvidersResult": {
       "type": "object",
@@ -6121,7 +7033,9 @@
           "description": "A list of unique identifiers for Oauth Providers"
         }
       },
-      "required": ["providerIds"]
+      "required": [
+        "providerIds"
+      ]
     },
     "DeleteOrganizationIntent": {
       "type": "object",
@@ -6131,7 +7045,9 @@
           "description": "Unique identifier for a given Organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "DeleteOrganizationResult": {
       "type": "object",
@@ -6141,7 +7057,9 @@
           "description": "Unique identifier for a given Organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "DeletePaymentMethodIntent": {
       "type": "object",
@@ -6152,7 +7070,9 @@
           "description": "The payment method that the customer wants to remove."
         }
       },
-      "required": ["paymentMethodId"]
+      "required": [
+        "paymentMethodId"
+      ]
     },
     "DeletePaymentMethodResult": {
       "type": "object",
@@ -6162,7 +7082,9 @@
           "description": "The payment method that was removed."
         }
       },
-      "required": ["paymentMethodId"]
+      "required": [
+        "paymentMethodId"
+      ]
     },
     "DeletePoliciesIntent": {
       "type": "object",
@@ -6175,14 +7097,18 @@
           "description": "List of unique identifiers for policies within an organization"
         }
       },
-      "required": ["policyIds"]
+      "required": [
+        "policyIds"
+      ]
     },
     "DeletePoliciesRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_POLICIES"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_POLICIES"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6200,7 +7126,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeletePoliciesResult": {
       "type": "object",
@@ -6213,7 +7144,9 @@
           "description": "A list of unique identifiers for the deleted policies."
         }
       },
-      "required": ["policyIds"]
+      "required": [
+        "policyIds"
+      ]
     },
     "DeletePolicyIntent": {
       "type": "object",
@@ -6223,14 +7156,18 @@
           "description": "Unique identifier for a given Policy."
         }
       },
-      "required": ["policyId"]
+      "required": [
+        "policyId"
+      ]
     },
     "DeletePolicyRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_POLICY"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_POLICY"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6248,7 +7185,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeletePolicyResult": {
       "type": "object",
@@ -6258,7 +7200,9 @@
           "description": "Unique identifier for a given Policy."
         }
       },
-      "required": ["policyId"]
+      "required": [
+        "policyId"
+      ]
     },
     "DeletePrivateKeyTagsIntent": {
       "type": "object",
@@ -6271,14 +7215,18 @@
           "description": "A list of Private Key Tag IDs."
         }
       },
-      "required": ["privateKeyTagIds"]
+      "required": [
+        "privateKeyTagIds"
+      ]
     },
     "DeletePrivateKeyTagsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_PRIVATE_KEY_TAGS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_PRIVATE_KEY_TAGS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6296,7 +7244,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeletePrivateKeyTagsResult": {
       "type": "object",
@@ -6316,7 +7269,10 @@
           "description": "A list of Private Key IDs."
         }
       },
-      "required": ["privateKeyTagIds", "privateKeyIds"]
+      "required": [
+        "privateKeyTagIds",
+        "privateKeyIds"
+      ]
     },
     "DeletePrivateKeysIntent": {
       "type": "object",
@@ -6334,14 +7290,18 @@
           "description": "Optional parameter for deleting the private keys, even if any have not been previously exported. If they have been exported, this field is ignored."
         }
       },
-      "required": ["privateKeyIds"]
+      "required": [
+        "privateKeyIds"
+      ]
     },
     "DeletePrivateKeysRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_PRIVATE_KEYS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_PRIVATE_KEYS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6359,7 +7319,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeletePrivateKeysResult": {
       "type": "object",
@@ -6372,7 +7337,9 @@
           "description": "A list of private key unique identifiers that were removed"
         }
       },
-      "required": ["privateKeyIds"]
+      "required": [
+        "privateKeyIds"
+      ]
     },
     "DeleteSmartContractInterfaceIntent": {
       "type": "object",
@@ -6382,14 +7349,18 @@
           "description": "The ID of a Smart Contract Interface intended for deletion."
         }
       },
-      "required": ["smartContractInterfaceId"]
+      "required": [
+        "smartContractInterfaceId"
+      ]
     },
     "DeleteSmartContractInterfaceRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_SMART_CONTRACT_INTERFACE"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_SMART_CONTRACT_INTERFACE"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6407,7 +7378,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteSmartContractInterfaceResult": {
       "type": "object",
@@ -6417,7 +7393,9 @@
           "description": "The ID of the deleted Smart Contract Interface."
         }
       },
-      "required": ["smartContractInterfaceId"]
+      "required": [
+        "smartContractInterfaceId"
+      ]
     },
     "DeleteSubOrganizationIntent": {
       "type": "object",
@@ -6434,7 +7412,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_SUB_ORGANIZATION"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_SUB_ORGANIZATION"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6452,7 +7432,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteSubOrganizationResult": {
       "type": "object",
@@ -6462,7 +7447,9 @@
           "description": "Unique identifier of the sub organization that was removed"
         }
       },
-      "required": ["subOrganizationUuid"]
+      "required": [
+        "subOrganizationUuid"
+      ]
     },
     "DeleteUserTagsIntent": {
       "type": "object",
@@ -6475,14 +7462,18 @@
           "description": "A list of User Tag IDs."
         }
       },
-      "required": ["userTagIds"]
+      "required": [
+        "userTagIds"
+      ]
     },
     "DeleteUserTagsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_USER_TAGS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_USER_TAGS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6500,7 +7491,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteUserTagsResult": {
       "type": "object",
@@ -6520,7 +7516,10 @@
           "description": "A list of User IDs."
         }
       },
-      "required": ["userTagIds", "userIds"]
+      "required": [
+        "userTagIds",
+        "userIds"
+      ]
     },
     "DeleteUsersIntent": {
       "type": "object",
@@ -6533,14 +7532,18 @@
           "description": "A list of User IDs."
         }
       },
-      "required": ["userIds"]
+      "required": [
+        "userIds"
+      ]
     },
     "DeleteUsersRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_USERS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_USERS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6558,7 +7561,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteUsersResult": {
       "type": "object",
@@ -6571,7 +7579,9 @@
           "description": "A list of User IDs."
         }
       },
-      "required": ["userIds"]
+      "required": [
+        "userIds"
+      ]
     },
     "DeleteWalletAccountsIntent": {
       "type": "object",
@@ -6589,14 +7599,18 @@
           "description": "Optional parameter for deleting the wallet accounts, even if any have not been previously exported. If they have been exported, this field is ignored."
         }
       },
-      "required": ["walletAccountIds"]
+      "required": [
+        "walletAccountIds"
+      ]
     },
     "DeleteWalletAccountsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_WALLET_ACCOUNTS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_WALLET_ACCOUNTS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6614,7 +7628,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteWalletAccountsResult": {
       "type": "object",
@@ -6627,7 +7646,9 @@
           "description": "A list of wallet account unique identifiers that were removed"
         }
       },
-      "required": ["walletAccountIds"]
+      "required": [
+        "walletAccountIds"
+      ]
     },
     "DeleteWalletsIntent": {
       "type": "object",
@@ -6645,14 +7666,18 @@
           "description": "Optional parameter for deleting the wallets, even if any have not been previously exported. If they have been exported, this field is ignored."
         }
       },
-      "required": ["walletIds"]
+      "required": [
+        "walletIds"
+      ]
     },
     "DeleteWalletsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_DELETE_WALLETS"]
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_WALLETS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6670,7 +7695,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "DeleteWalletsResult": {
       "type": "object",
@@ -6683,7 +7713,9 @@
           "description": "A list of wallet unique identifiers that were removed"
         }
       },
-      "required": ["walletIds"]
+      "required": [
+        "walletIds"
+      ]
     },
     "DisableAuthProxyIntent": {
       "type": "object"
@@ -6699,7 +7731,9 @@
           "description": "Unique identifier for a given Private Key."
         }
       },
-      "required": ["privateKeyId"]
+      "required": [
+        "privateKeyId"
+      ]
     },
     "DisablePrivateKeyResult": {
       "type": "object",
@@ -6709,11 +7743,16 @@
           "description": "Unique identifier for a given Private Key."
         }
       },
-      "required": ["privateKeyId"]
+      "required": [
+        "privateKeyId"
+      ]
     },
     "Effect": {
       "type": "string",
-      "enum": ["EFFECT_ALLOW", "EFFECT_DENY"]
+      "enum": [
+        "EFFECT_ALLOW",
+        "EFFECT_DENY"
+      ]
     },
     "EmailAuthCustomizationParams": {
       "type": "object",
@@ -6743,7 +7782,9 @@
           "description": "Unique identifier for a given Email Template. If not specified, the default is the most recent Email Template."
         }
       },
-      "required": ["appName"]
+      "required": [
+        "appName"
+      ]
     },
     "EmailAuthIntent": {
       "type": "object",
@@ -6759,7 +7800,7 @@
         "apiKeyName": {
           "type": "string",
           "x-nullable": true,
-          "description": "Optional human-readable name for an API Key. If none provided, default to Email Auth - \u003cTimestamp\u003e"
+          "description": "Optional human-readable name for an API Key. If none provided, default to Email Auth - <Timestamp>"
         },
         "expirationSeconds": {
           "type": "string",
@@ -6792,7 +7833,10 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["email", "targetPublicKey"]
+      "required": [
+        "email",
+        "targetPublicKey"
+      ]
     },
     "EmailAuthIntentV2": {
       "type": "object",
@@ -6808,7 +7852,7 @@
         "apiKeyName": {
           "type": "string",
           "x-nullable": true,
-          "description": "Optional human-readable name for an API Key. If none provided, default to Email Auth - \u003cTimestamp\u003e"
+          "description": "Optional human-readable name for an API Key. If none provided, default to Email Auth - <Timestamp>"
         },
         "expirationSeconds": {
           "type": "string",
@@ -6841,7 +7885,10 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["email", "targetPublicKey"]
+      "required": [
+        "email",
+        "targetPublicKey"
+      ]
     },
     "EmailAuthIntentV3": {
       "type": "object",
@@ -6857,7 +7904,7 @@
         "apiKeyName": {
           "type": "string",
           "x-nullable": true,
-          "description": "Optional human-readable name for an API Key. If none provided, default to Email Auth - \u003cTimestamp\u003e"
+          "description": "Optional human-readable name for an API Key. If none provided, default to Email Auth - <Timestamp>"
         },
         "expirationSeconds": {
           "type": "string",
@@ -6889,14 +7936,20 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["email", "targetPublicKey", "emailCustomization"]
+      "required": [
+        "email",
+        "targetPublicKey",
+        "emailCustomization"
+      ]
     },
     "EmailAuthRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_EMAIL_AUTH_V3"]
+          "enum": [
+            "ACTIVITY_TYPE_EMAIL_AUTH_V3"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -6914,7 +7967,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "EmailAuthResult": {
       "type": "object",
@@ -6928,7 +7986,10 @@
           "description": "Unique identifier for the created API key."
         }
       },
-      "required": ["userId", "apiKeyId"]
+      "required": [
+        "userId",
+        "apiKeyId"
+      ]
     },
     "EmailCustomizationParams": {
       "type": "object",
@@ -6996,7 +8057,9 @@
           "description": "A User ID with permission to initiate authentication."
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "EthSendRawTransactionIntent": {
       "type": "object",
@@ -7018,7 +8081,10 @@
           "description": "CAIP-2 chain ID (e.g., 'eip155:1' for Ethereum mainnet)."
         }
       },
-      "required": ["signedTransaction", "caip2"]
+      "required": [
+        "signedTransaction",
+        "caip2"
+      ]
     },
     "EthSendRawTransactionResult": {
       "type": "object",
@@ -7028,7 +8094,9 @@
           "description": "The transaction hash of the sent transaction"
         }
       },
-      "required": ["transactionHash"]
+      "required": [
+        "transactionHash"
+      ]
     },
     "EthSendTransactionIntent": {
       "type": "object",
@@ -7094,14 +8162,20 @@
           "description": "The gas station delegate contract nonce. Only used when sponsor=true. Include this if you want maximal security posture."
         }
       },
-      "required": ["from", "caip2", "to"]
+      "required": [
+        "from",
+        "caip2",
+        "to"
+      ]
     },
     "EthSendTransactionRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_ETH_SEND_TRANSACTION"]
+          "enum": [
+            "ACTIVITY_TYPE_ETH_SEND_TRANSACTION"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -7119,7 +8193,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "EthSendTransactionResult": {
       "type": "object",
@@ -7129,7 +8208,9 @@
           "description": "The send_transaction_status ID associated with the transaction submission"
         }
       },
-      "required": ["sendTransactionStatusId"]
+      "required": [
+        "sendTransactionStatusId"
+      ]
     },
     "EthSendTransactionStatus": {
       "type": "object",
@@ -7153,14 +8234,19 @@
           "description": "Client-side public key generated by the user, to which the export bundle will be encrypted."
         }
       },
-      "required": ["privateKeyId", "targetPublicKey"]
+      "required": [
+        "privateKeyId",
+        "targetPublicKey"
+      ]
     },
     "ExportPrivateKeyRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_EXPORT_PRIVATE_KEY"]
+          "enum": [
+            "ACTIVITY_TYPE_EXPORT_PRIVATE_KEY"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -7178,7 +8264,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "ExportPrivateKeyResult": {
       "type": "object",
@@ -7192,7 +8283,10 @@
           "description": "Export bundle containing a private key encrypted to the client's target public key."
         }
       },
-      "required": ["privateKeyId", "exportBundle"]
+      "required": [
+        "privateKeyId",
+        "exportBundle"
+      ]
     },
     "ExportWalletAccountIntent": {
       "type": "object",
@@ -7206,14 +8300,19 @@
           "description": "Client-side public key generated by the user, to which the export bundle will be encrypted."
         }
       },
-      "required": ["address", "targetPublicKey"]
+      "required": [
+        "address",
+        "targetPublicKey"
+      ]
     },
     "ExportWalletAccountRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_EXPORT_WALLET_ACCOUNT"]
+          "enum": [
+            "ACTIVITY_TYPE_EXPORT_WALLET_ACCOUNT"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -7231,7 +8330,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "ExportWalletAccountResult": {
       "type": "object",
@@ -7245,7 +8349,10 @@
           "description": "Export bundle containing a private key encrypted by the client's target public key."
         }
       },
-      "required": ["address", "exportBundle"]
+      "required": [
+        "address",
+        "exportBundle"
+      ]
     },
     "ExportWalletIntent": {
       "type": "object",
@@ -7264,14 +8371,19 @@
           "description": "The language of the mnemonic to export. Defaults to English."
         }
       },
-      "required": ["walletId", "targetPublicKey"]
+      "required": [
+        "walletId",
+        "targetPublicKey"
+      ]
     },
     "ExportWalletRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_EXPORT_WALLET"]
+          "enum": [
+            "ACTIVITY_TYPE_EXPORT_WALLET"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -7289,7 +8401,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "ExportWalletResult": {
       "type": "object",
@@ -7303,7 +8420,10 @@
           "description": "Export bundle containing a wallet mnemonic + optional newline passphrase encrypted by the client's target public key."
         }
       },
-      "required": ["walletId", "exportBundle"]
+      "required": [
+        "walletId",
+        "exportBundle"
+      ]
     },
     "Feature": {
       "type": "object",
@@ -7492,7 +8612,9 @@
           "description": "Array of activity types filtering which activities will be listed in the response."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetActivitiesResponse": {
       "type": "object",
@@ -7506,7 +8628,9 @@
           "description": "A list of activities."
         }
       },
-      "required": ["activities"]
+      "required": [
+        "activities"
+      ]
     },
     "GetActivityRequest": {
       "type": "object",
@@ -7520,7 +8644,10 @@
           "description": "Unique identifier for a given activity object."
         }
       },
-      "required": ["organizationId", "activityId"]
+      "required": [
+        "organizationId",
+        "activityId"
+      ]
     },
     "GetApiKeyRequest": {
       "type": "object",
@@ -7534,7 +8661,10 @@
           "description": "Unique identifier for a given API key."
         }
       },
-      "required": ["organizationId", "apiKeyId"]
+      "required": [
+        "organizationId",
+        "apiKeyId"
+      ]
     },
     "GetApiKeyResponse": {
       "type": "object",
@@ -7544,7 +8674,9 @@
           "description": "An API key."
         }
       },
-      "required": ["apiKey"]
+      "required": [
+        "apiKey"
+      ]
     },
     "GetApiKeysRequest": {
       "type": "object",
@@ -7559,7 +8691,9 @@
           "description": "Unique identifier for a given user."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetApiKeysResponse": {
       "type": "object",
@@ -7573,7 +8707,9 @@
           "description": "A list of API keys."
         }
       },
-      "required": ["apiKeys"]
+      "required": [
+        "apiKeys"
+      ]
     },
     "GetAppProofsRequest": {
       "type": "object",
@@ -7587,7 +8723,10 @@
           "description": "Unique identifier for a given activity."
         }
       },
-      "required": ["organizationId", "activityId"]
+      "required": [
+        "organizationId",
+        "activityId"
+      ]
     },
     "GetAppProofsResponse": {
       "type": "object",
@@ -7600,7 +8739,9 @@
           }
         }
       },
-      "required": ["appProofs"]
+      "required": [
+        "appProofs"
+      ]
     },
     "GetAuthenticatorRequest": {
       "type": "object",
@@ -7614,7 +8755,10 @@
           "description": "Unique identifier for a given authenticator."
         }
       },
-      "required": ["organizationId", "authenticatorId"]
+      "required": [
+        "organizationId",
+        "authenticatorId"
+      ]
     },
     "GetAuthenticatorResponse": {
       "type": "object",
@@ -7624,7 +8768,9 @@
           "description": "An authenticator."
         }
       },
-      "required": ["authenticator"]
+      "required": [
+        "authenticator"
+      ]
     },
     "GetAuthenticatorsRequest": {
       "type": "object",
@@ -7638,7 +8784,10 @@
           "description": "Unique identifier for a given user."
         }
       },
-      "required": ["organizationId", "userId"]
+      "required": [
+        "organizationId",
+        "userId"
+      ]
     },
     "GetAuthenticatorsResponse": {
       "type": "object",
@@ -7652,7 +8801,9 @@
           "description": "A list of authenticators."
         }
       },
-      "required": ["authenticators"]
+      "required": [
+        "authenticators"
+      ]
     },
     "GetBootProofRequest": {
       "type": "object",
@@ -7666,7 +8817,10 @@
           "description": "Hex encoded ephemeral public key."
         }
       },
-      "required": ["organizationId", "ephemeralKey"]
+      "required": [
+        "organizationId",
+        "ephemeralKey"
+      ]
     },
     "GetGasUsageRequest": {
       "type": "object",
@@ -7676,7 +8830,9 @@
           "description": "Unique identifier for a given Organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetGasUsageResponse": {
       "type": "object",
@@ -7695,7 +8851,11 @@
           "description": "The total gas usage (in USD) of all sponsored transactions processed over the last `window_duration_minutes`"
         }
       },
-      "required": ["windowDurationMinutes", "windowLimitUsd", "usageUsd"]
+      "required": [
+        "windowDurationMinutes",
+        "windowLimitUsd",
+        "usageUsd"
+      ]
     },
     "GetLatestBootProofRequest": {
       "type": "object",
@@ -7709,7 +8869,10 @@
           "description": "Name of enclave app."
         }
       },
-      "required": ["organizationId", "appName"]
+      "required": [
+        "organizationId",
+        "appName"
+      ]
     },
     "GetNoncesRequest": {
       "type": "object",
@@ -7743,7 +8906,11 @@
           "description": "Whether to fetch the gas station nonce used for sponsored transactions."
         }
       },
-      "required": ["organizationId", "address", "caip2"]
+      "required": [
+        "organizationId",
+        "address",
+        "caip2"
+      ]
     },
     "GetNoncesResponse": {
       "type": "object",
@@ -7774,7 +8941,10 @@
           "description": "Unique identifier for a given OAuth 2.0 Credential."
         }
       },
-      "required": ["organizationId", "oauth2CredentialId"]
+      "required": [
+        "organizationId",
+        "oauth2CredentialId"
+      ]
     },
     "GetOauth2CredentialResponse": {
       "type": "object",
@@ -7783,7 +8953,9 @@
           "$ref": "#/definitions/Oauth2Credential"
         }
       },
-      "required": ["oauth2Credential"]
+      "required": [
+        "oauth2Credential"
+      ]
     },
     "GetOauthProvidersRequest": {
       "type": "object",
@@ -7798,7 +8970,9 @@
           "description": "Unique identifier for a given user."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetOauthProvidersResponse": {
       "type": "object",
@@ -7812,7 +8986,9 @@
           "description": "A list of Oauth providers."
         }
       },
-      "required": ["oauthProviders"]
+      "required": [
+        "oauthProviders"
+      ]
     },
     "GetOnRampTransactionStatusRequest": {
       "type": "object",
@@ -7831,7 +9007,10 @@
           "description": "Optional flag to specify if the transaction status should be refreshed from the fiat on ramp provider. Default = false."
         }
       },
-      "required": ["organizationId", "transactionId"]
+      "required": [
+        "organizationId",
+        "transactionId"
+      ]
     },
     "GetOnRampTransactionStatusResponse": {
       "type": "object",
@@ -7841,7 +9020,9 @@
           "description": "The status of the fiat on ramp transaction."
         }
       },
-      "required": ["transactionStatus"]
+      "required": [
+        "transactionStatus"
+      ]
     },
     "GetOrganizationConfigsRequest": {
       "type": "object",
@@ -7851,7 +9032,9 @@
           "description": "Unique identifier for a given organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetOrganizationConfigsResponse": {
       "type": "object",
@@ -7861,7 +9044,9 @@
           "description": "Organization configs including quorum settings and organization features."
         }
       },
-      "required": ["configs"]
+      "required": [
+        "configs"
+      ]
     },
     "GetPoliciesRequest": {
       "type": "object",
@@ -7871,7 +9056,9 @@
           "description": "Unique identifier for a given organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetPoliciesResponse": {
       "type": "object",
@@ -7885,7 +9072,9 @@
           "description": "A list of policies."
         }
       },
-      "required": ["policies"]
+      "required": [
+        "policies"
+      ]
     },
     "GetPolicyEvaluationsRequest": {
       "type": "object",
@@ -7899,7 +9088,10 @@
           "description": "Unique identifier for a given activity."
         }
       },
-      "required": ["organizationId", "activityId"]
+      "required": [
+        "organizationId",
+        "activityId"
+      ]
     },
     "GetPolicyEvaluationsResponse": {
       "type": "object",
@@ -7912,7 +9104,9 @@
           }
         }
       },
-      "required": ["policyEvaluations"]
+      "required": [
+        "policyEvaluations"
+      ]
     },
     "GetPolicyRequest": {
       "type": "object",
@@ -7926,7 +9120,10 @@
           "description": "Unique identifier for a given policy."
         }
       },
-      "required": ["organizationId", "policyId"]
+      "required": [
+        "organizationId",
+        "policyId"
+      ]
     },
     "GetPolicyResponse": {
       "type": "object",
@@ -7936,7 +9133,9 @@
           "description": "Object that codifies rules defining the actions that are permissible within an organization."
         }
       },
-      "required": ["policy"]
+      "required": [
+        "policy"
+      ]
     },
     "GetPrivateKeyRequest": {
       "type": "object",
@@ -7950,7 +9149,10 @@
           "description": "Unique identifier for a given private key."
         }
       },
-      "required": ["organizationId", "privateKeyId"]
+      "required": [
+        "organizationId",
+        "privateKeyId"
+      ]
     },
     "GetPrivateKeyResponse": {
       "type": "object",
@@ -7960,7 +9162,9 @@
           "description": "Cryptographic public/private key pair that can be used for cryptocurrency needs or more generalized encryption."
         }
       },
-      "required": ["privateKey"]
+      "required": [
+        "privateKey"
+      ]
     },
     "GetPrivateKeysRequest": {
       "type": "object",
@@ -7970,7 +9174,9 @@
           "description": "Unique identifier for a given organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetPrivateKeysResponse": {
       "type": "object",
@@ -7984,7 +9190,9 @@
           "description": "A list of private keys."
         }
       },
-      "required": ["privateKeys"]
+      "required": [
+        "privateKeys"
+      ]
     },
     "GetSendTransactionStatusRequest": {
       "type": "object",
@@ -7998,7 +9206,10 @@
           "description": "The unique identifier of a send transaction request."
         }
       },
-      "required": ["organizationId", "sendTransactionStatusId"]
+      "required": [
+        "organizationId",
+        "sendTransactionStatusId"
+      ]
     },
     "GetSendTransactionStatusResponse": {
       "type": "object",
@@ -8022,7 +9233,9 @@
           "description": "Structured error information including revert details, if available."
         }
       },
-      "required": ["txStatus"]
+      "required": [
+        "txStatus"
+      ]
     },
     "GetSmartContractInterfaceRequest": {
       "type": "object",
@@ -8036,7 +9249,10 @@
           "description": "Unique identifier for a given smart contract interface."
         }
       },
-      "required": ["organizationId", "smartContractInterfaceId"]
+      "required": [
+        "organizationId",
+        "smartContractInterfaceId"
+      ]
     },
     "GetSmartContractInterfaceResponse": {
       "type": "object",
@@ -8046,7 +9262,9 @@
           "description": "Object to be used in conjunction with policies to guard transaction signing."
         }
       },
-      "required": ["smartContractInterface"]
+      "required": [
+        "smartContractInterface"
+      ]
     },
     "GetSmartContractInterfacesRequest": {
       "type": "object",
@@ -8056,7 +9274,9 @@
           "description": "Unique identifier for a given organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetSmartContractInterfacesResponse": {
       "type": "object",
@@ -8070,7 +9290,9 @@
           "description": "A list of smart contract interfaces."
         }
       },
-      "required": ["smartContractInterfaces"]
+      "required": [
+        "smartContractInterfaces"
+      ]
     },
     "GetSubOrgIdsRequest": {
       "type": "object",
@@ -8092,7 +9314,9 @@
           "description": "Parameters used for cursor-based pagination."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetSubOrgIdsResponse": {
       "type": "object",
@@ -8105,7 +9329,9 @@
           "description": "List of unique identifiers for the matching sub-organizations."
         }
       },
-      "required": ["organizationIds"]
+      "required": [
+        "organizationIds"
+      ]
     },
     "GetUserRequest": {
       "type": "object",
@@ -8119,7 +9345,10 @@
           "description": "Unique identifier for a given user."
         }
       },
-      "required": ["organizationId", "userId"]
+      "required": [
+        "organizationId",
+        "userId"
+      ]
     },
     "GetUserResponse": {
       "type": "object",
@@ -8129,7 +9358,9 @@
           "description": "Web and/or API user within your organization."
         }
       },
-      "required": ["user"]
+      "required": [
+        "user"
+      ]
     },
     "GetUsersRequest": {
       "type": "object",
@@ -8139,7 +9370,9 @@
           "description": "Unique identifier for a given organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetUsersResponse": {
       "type": "object",
@@ -8153,7 +9386,9 @@
           "description": "A list of users."
         }
       },
-      "required": ["users"]
+      "required": [
+        "users"
+      ]
     },
     "GetVerifiedSubOrgIdsRequest": {
       "type": "object",
@@ -8175,7 +9410,9 @@
           "description": "Parameters used for cursor-based pagination."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetVerifiedSubOrgIdsResponse": {
       "type": "object",
@@ -8188,7 +9425,9 @@
           "description": "List of unique identifiers for the matching sub-organizations."
         }
       },
-      "required": ["organizationIds"]
+      "required": [
+        "organizationIds"
+      ]
     },
     "GetWalletAccountRequest": {
       "type": "object",
@@ -8212,7 +9451,10 @@
           "description": "Path corresponding to a wallet account."
         }
       },
-      "required": ["organizationId", "walletId"]
+      "required": [
+        "organizationId",
+        "walletId"
+      ]
     },
     "GetWalletAccountResponse": {
       "type": "object",
@@ -8222,7 +9464,9 @@
           "description": "The resulting wallet account."
         }
       },
-      "required": ["account"]
+      "required": [
+        "account"
+      ]
     },
     "GetWalletAccountsRequest": {
       "type": "object",
@@ -8246,7 +9490,9 @@
           "description": "Parameters used for cursor-based pagination."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetWalletAccountsResponse": {
       "type": "object",
@@ -8260,7 +9506,9 @@
           "description": "A list of accounts generated from a wallet that share a common seed."
         }
       },
-      "required": ["accounts"]
+      "required": [
+        "accounts"
+      ]
     },
     "GetWalletAddressBalancesRequest": {
       "type": "object",
@@ -8288,7 +9536,11 @@
           "description": "CAIP-2 chain ID (e.g., 'eip155:1' for Ethereum mainnet or 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' for Solana mainnet). Human-readable Solana aliases ('solana:mainnet', 'solana:devnet') are also accepted and normalized to canonical CAIP-2 values."
         }
       },
-      "required": ["organizationId", "address", "caip2"]
+      "required": [
+        "organizationId",
+        "address",
+        "caip2"
+      ]
     },
     "GetWalletAddressBalancesResponse": {
       "type": "object",
@@ -8315,7 +9567,10 @@
           "description": "Unique identifier for a given wallet."
         }
       },
-      "required": ["organizationId", "walletId"]
+      "required": [
+        "organizationId",
+        "walletId"
+      ]
     },
     "GetWalletResponse": {
       "type": "object",
@@ -8325,7 +9580,9 @@
           "description": "A collection of deterministically generated cryptographic public / private key pairs that share a common seed."
         }
       },
-      "required": ["wallet"]
+      "required": [
+        "wallet"
+      ]
     },
     "GetWalletsRequest": {
       "type": "object",
@@ -8335,7 +9592,9 @@
           "description": "Unique identifier for a given organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetWalletsResponse": {
       "type": "object",
@@ -8349,7 +9608,9 @@
           "description": "A list of wallets."
         }
       },
-      "required": ["wallets"]
+      "required": [
+        "wallets"
+      ]
     },
     "GetWhoamiRequest": {
       "type": "object",
@@ -8359,7 +9620,9 @@
           "description": "Unique identifier for a given organization. If the request is being made by a WebAuthN user and their sub-organization ID is unknown, this can be the parent organization ID; using the sub-organization ID when possible is preferred due to performance reasons."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "GetWhoamiResponse": {
       "type": "object",
@@ -8381,7 +9644,12 @@
           "description": "Human-readable name for a user."
         }
       },
-      "required": ["organizationId", "organizationName", "userId", "username"]
+      "required": [
+        "organizationId",
+        "organizationName",
+        "userId",
+        "username"
+      ]
     },
     "HashFunction": {
       "type": "string",
@@ -8432,7 +9700,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_IMPORT_PRIVATE_KEY"]
+          "enum": [
+            "ACTIVITY_TYPE_IMPORT_PRIVATE_KEY"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -8450,7 +9720,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "ImportPrivateKeyResult": {
       "type": "object",
@@ -8468,7 +9743,10 @@
           "description": "A list of addresses."
         }
       },
-      "required": ["privateKeyId", "addresses"]
+      "required": [
+        "privateKeyId",
+        "addresses"
+      ]
     },
     "ImportWalletIntent": {
       "type": "object",
@@ -8494,14 +9772,21 @@
           "description": "A list of wallet Accounts."
         }
       },
-      "required": ["userId", "walletName", "encryptedBundle", "accounts"]
+      "required": [
+        "userId",
+        "walletName",
+        "encryptedBundle",
+        "accounts"
+      ]
     },
     "ImportWalletRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_IMPORT_WALLET"]
+          "enum": [
+            "ACTIVITY_TYPE_IMPORT_WALLET"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -8519,7 +9804,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "ImportWalletResult": {
       "type": "object",
@@ -8536,7 +9826,10 @@
           "description": "A list of account addresses."
         }
       },
-      "required": ["walletId", "addresses"]
+      "required": [
+        "walletId",
+        "addresses"
+      ]
     },
     "InitFiatOnRampIntent": {
       "type": "object",
@@ -8605,7 +9898,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_INIT_FIAT_ON_RAMP"]
+          "enum": [
+            "ACTIVITY_TYPE_INIT_FIAT_ON_RAMP"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -8623,7 +9918,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "InitFiatOnRampResult": {
       "type": "object",
@@ -8641,7 +9941,10 @@
           "description": "Optional signature of the MoonPay Widget URL. The signature is generated if the Init Fiat On Ramp intent includes the urlForSignature field. The signature can be used to initialize the MoonPay SDKs when URL signing is enabled for your project."
         }
       },
-      "required": ["onRampUrl", "onRampTransactionId"]
+      "required": [
+        "onRampUrl",
+        "onRampTransactionId"
+      ]
     },
     "InitImportPrivateKeyIntent": {
       "type": "object",
@@ -8651,14 +9954,18 @@
           "description": "The ID of the User importing a Private Key."
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "InitImportPrivateKeyRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_INIT_IMPORT_PRIVATE_KEY"]
+          "enum": [
+            "ACTIVITY_TYPE_INIT_IMPORT_PRIVATE_KEY"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -8676,7 +9983,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "InitImportPrivateKeyResult": {
       "type": "object",
@@ -8686,7 +9998,9 @@
           "description": "Import bundle containing a public key and signature to use for importing client data."
         }
       },
-      "required": ["importBundle"]
+      "required": [
+        "importBundle"
+      ]
     },
     "InitImportWalletIntent": {
       "type": "object",
@@ -8696,14 +10010,18 @@
           "description": "The ID of the User importing a Wallet."
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "InitImportWalletRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_INIT_IMPORT_WALLET"]
+          "enum": [
+            "ACTIVITY_TYPE_INIT_IMPORT_WALLET"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -8721,7 +10039,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "InitImportWalletResult": {
       "type": "object",
@@ -8731,7 +10054,9 @@
           "description": "Import bundle containing a public key and signature to use for importing client data."
         }
       },
-      "required": ["importBundle"]
+      "required": [
+        "importBundle"
+      ]
     },
     "InitOtpAuthIntent": {
       "type": "object",
@@ -8775,7 +10100,10 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["otpType", "contact"]
+      "required": [
+        "otpType",
+        "contact"
+      ]
     },
     "InitOtpAuthIntentV2": {
       "type": "object",
@@ -8830,7 +10158,10 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["otpType", "contact"]
+      "required": [
+        "otpType",
+        "contact"
+      ]
     },
     "InitOtpAuthIntentV3": {
       "type": "object",
@@ -8894,14 +10225,20 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["otpType", "contact", "appName"]
+      "required": [
+        "otpType",
+        "contact",
+        "appName"
+      ]
     },
     "InitOtpAuthRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_INIT_OTP_AUTH_V3"]
+          "enum": [
+            "ACTIVITY_TYPE_INIT_OTP_AUTH_V3"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -8919,7 +10256,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "InitOtpAuthResult": {
       "type": "object",
@@ -8929,7 +10271,9 @@
           "description": "Unique identifier for an OTP authentication"
         }
       },
-      "required": ["otpId"]
+      "required": [
+        "otpId"
+      ]
     },
     "InitOtpAuthResultV2": {
       "type": "object",
@@ -8939,7 +10283,9 @@
           "description": "Unique identifier for an OTP authentication"
         }
       },
-      "required": ["otpId"]
+      "required": [
+        "otpId"
+      ]
     },
     "InitOtpIntent": {
       "type": "object",
@@ -8999,7 +10345,10 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["otpType", "contact"]
+      "required": [
+        "otpType",
+        "contact"
+      ]
     },
     "InitOtpIntentV2": {
       "type": "object",
@@ -9063,7 +10412,11 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["otpType", "contact", "appName"]
+      "required": [
+        "otpType",
+        "contact",
+        "appName"
+      ]
     },
     "InitOtpIntentV3": {
       "type": "object",
@@ -9127,14 +10480,20 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["otpType", "contact", "appName"]
+      "required": [
+        "otpType",
+        "contact",
+        "appName"
+      ]
     },
     "InitOtpRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_INIT_OTP_V3"]
+          "enum": [
+            "ACTIVITY_TYPE_INIT_OTP_V3"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -9152,7 +10511,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "InitOtpResult": {
       "type": "object",
@@ -9162,7 +10526,9 @@
           "description": "Unique identifier for an OTP authentication"
         }
       },
-      "required": ["otpId"]
+      "required": [
+        "otpId"
+      ]
     },
     "InitOtpResultV2": {
       "type": "object",
@@ -9176,7 +10542,10 @@
           "description": "Signed bundle containing a target encryption key to use when submitting OTP codes."
         }
       },
-      "required": ["otpId", "otpEncryptionTargetBundle"]
+      "required": [
+        "otpId",
+        "otpEncryptionTargetBundle"
+      ]
     },
     "InitUserEmailRecoveryIntent": {
       "type": "object",
@@ -9215,7 +10584,10 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["email", "targetPublicKey"]
+      "required": [
+        "email",
+        "targetPublicKey"
+      ]
     },
     "InitUserEmailRecoveryIntentV2": {
       "type": "object",
@@ -9253,14 +10625,20 @@
           "description": "Optional custom email address to use as reply-to"
         }
       },
-      "required": ["email", "targetPublicKey", "emailCustomization"]
+      "required": [
+        "email",
+        "targetPublicKey",
+        "emailCustomization"
+      ]
     },
     "InitUserEmailRecoveryRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_INIT_USER_EMAIL_RECOVERY_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_INIT_USER_EMAIL_RECOVERY_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -9278,7 +10656,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "InitUserEmailRecoveryResult": {
       "type": "object",
@@ -9288,7 +10671,9 @@
           "description": "Unique identifier for the user being recovered."
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "Intent": {
       "type": "object",
@@ -9698,7 +11083,9 @@
           "description": "Unique identifier for a given Organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "ListFiatOnRampCredentialsResponse": {
       "type": "object",
@@ -9711,7 +11098,9 @@
           }
         }
       },
-      "required": ["fiatOnRampCredentials"]
+      "required": [
+        "fiatOnRampCredentials"
+      ]
     },
     "ListOauth2CredentialsRequest": {
       "type": "object",
@@ -9721,7 +11110,9 @@
           "description": "Unique identifier for a given Organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "ListOauth2CredentialsResponse": {
       "type": "object",
@@ -9734,7 +11125,9 @@
           }
         }
       },
-      "required": ["oauth2Credentials"]
+      "required": [
+        "oauth2Credentials"
+      ]
     },
     "ListPrivateKeyTagsRequest": {
       "type": "object",
@@ -9744,7 +11137,9 @@
           "description": "Unique identifier for a given organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "ListPrivateKeyTagsResponse": {
       "type": "object",
@@ -9758,7 +11153,9 @@
           "description": "A list of private key tags."
         }
       },
-      "required": ["privateKeyTags"]
+      "required": [
+        "privateKeyTags"
+      ]
     },
     "ListSupportedAssetsRequest": {
       "type": "object",
@@ -9782,7 +11179,10 @@
           "description": "CAIP-2 chain ID (e.g., 'eip155:1' for Ethereum mainnet or 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' for Solana mainnet). Human-readable Solana aliases ('solana:mainnet', 'solana:devnet') are also accepted and normalized to canonical CAIP-2 values."
         }
       },
-      "required": ["organizationId", "caip2"]
+      "required": [
+        "organizationId",
+        "caip2"
+      ]
     },
     "ListSupportedAssetsResponse": {
       "type": "object",
@@ -9805,7 +11205,9 @@
           "description": "Unique identifier for a given organization."
         }
       },
-      "required": ["organizationId"]
+      "required": [
+        "organizationId"
+      ]
     },
     "ListUserTagsResponse": {
       "type": "object",
@@ -9819,7 +11221,9 @@
           "description": "A list of user tags."
         }
       },
-      "required": ["userTags"]
+      "required": [
+        "userTags"
+      ]
     },
     "LoginUsage": {
       "type": "object",
@@ -9829,7 +11233,9 @@
           "description": "Public key for authentication"
         }
       },
-      "required": ["publicKey"]
+      "required": [
+        "publicKey"
+      ]
     },
     "MnemonicLanguage": {
       "type": "string",
@@ -9855,7 +11261,9 @@
           "$ref": "#/definitions/TokenUsage"
         }
       },
-      "required": ["stamp"]
+      "required": [
+        "stamp"
+      ]
     },
     "NativeRevertError": {
       "type": "object",
@@ -9920,7 +11328,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_OAUTH2_AUTHENTICATE"]
+          "enum": [
+            "ACTIVITY_TYPE_OAUTH2_AUTHENTICATE"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -9938,7 +11348,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "Oauth2AuthenticateResult": {
       "type": "object",
@@ -9948,7 +11363,9 @@
           "description": "Base64 encoded OIDC token issued by 0xkey to be used with the LoginWithOAuth activity"
         }
       },
-      "required": ["oidcToken"]
+      "required": [
+        "oidcToken"
+      ]
     },
     "Oauth2Credential": {
       "type": "object",
@@ -9992,7 +11409,10 @@
     },
     "Oauth2Provider": {
       "type": "string",
-      "enum": ["OAUTH2_PROVIDER_X", "OAUTH2_PROVIDER_DISCORD"]
+      "enum": [
+        "OAUTH2_PROVIDER_X",
+        "OAUTH2_PROVIDER_DISCORD"
+      ]
     },
     "OauthIntent": {
       "type": "object",
@@ -10008,7 +11428,7 @@
         "apiKeyName": {
           "type": "string",
           "x-nullable": true,
-          "description": "Optional human-readable name for an API Key. If none provided, default to Oauth - \u003cTimestamp\u003e"
+          "description": "Optional human-readable name for an API Key. If none provided, default to Oauth - <Timestamp>"
         },
         "expirationSeconds": {
           "type": "string",
@@ -10021,7 +11441,10 @@
           "description": "Invalidate all other previously generated Oauth API keys"
         }
       },
-      "required": ["oidcToken", "targetPublicKey"]
+      "required": [
+        "oidcToken",
+        "targetPublicKey"
+      ]
     },
     "OauthLoginIntent": {
       "type": "object",
@@ -10045,14 +11468,19 @@
           "description": "Invalidate all other previously generated Login API keys"
         }
       },
-      "required": ["oidcToken", "publicKey"]
+      "required": [
+        "oidcToken",
+        "publicKey"
+      ]
     },
     "OauthLoginRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_OAUTH_LOGIN"]
+          "enum": [
+            "ACTIVITY_TYPE_OAUTH_LOGIN"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -10070,7 +11498,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "OauthLoginResult": {
       "type": "object",
@@ -10080,7 +11513,9 @@
           "description": "Signed JWT containing an expiry, public key, session type, user id, and organization id"
         }
       },
-      "required": ["session"]
+      "required": [
+        "session"
+      ]
     },
     "OauthProvider": {
       "type": "object",
@@ -10134,14 +11569,19 @@
           "description": "Base64 encoded OIDC token"
         }
       },
-      "required": ["providerName", "oidcToken"]
+      "required": [
+        "providerName",
+        "oidcToken"
+      ]
     },
     "OauthRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_OAUTH"]
+          "enum": [
+            "ACTIVITY_TYPE_OAUTH"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -10159,7 +11599,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "OauthResult": {
       "type": "object",
@@ -10177,7 +11622,11 @@
           "description": "HPKE encrypted credential bundle"
         }
       },
-      "required": ["userId", "apiKeyId", "credentialBundle"]
+      "required": [
+        "userId",
+        "apiKeyId",
+        "credentialBundle"
+      ]
     },
     "Operator": {
       "type": "string",
@@ -10213,7 +11662,7 @@
         "apiKeyName": {
           "type": "string",
           "x-nullable": true,
-          "description": "Optional human-readable name for an API Key. If none provided, default to OTP Auth - \u003cTimestamp\u003e"
+          "description": "Optional human-readable name for an API Key. If none provided, default to OTP Auth - <Timestamp>"
         },
         "expirationSeconds": {
           "type": "string",
@@ -10226,14 +11675,20 @@
           "description": "Invalidate all other previously generated OTP Auth API keys"
         }
       },
-      "required": ["otpId", "otpCode", "targetPublicKey"]
+      "required": [
+        "otpId",
+        "otpCode",
+        "targetPublicKey"
+      ]
     },
     "OtpAuthRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_OTP_AUTH"]
+          "enum": [
+            "ACTIVITY_TYPE_OTP_AUTH"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -10251,7 +11706,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "OtpAuthResult": {
       "type": "object",
@@ -10269,7 +11729,9 @@
           "description": "HPKE encrypted credential bundle"
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "OtpLoginIntent": {
       "type": "object",
@@ -10298,7 +11760,10 @@
           "description": "Optional signature proving authorization for this login. The signature is over the verification token ID and the public key. Only required if a public key was provided during the verification step."
         }
       },
-      "required": ["verificationToken", "publicKey"]
+      "required": [
+        "verificationToken",
+        "publicKey"
+      ]
     },
     "OtpLoginIntentV2": {
       "type": "object",
@@ -10326,14 +11791,20 @@
           "description": "Invalidate all other previously generated Login sessions"
         }
       },
-      "required": ["verificationToken", "publicKey", "clientSignature"]
+      "required": [
+        "verificationToken",
+        "publicKey",
+        "clientSignature"
+      ]
     },
     "OtpLoginRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_OTP_LOGIN_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_OTP_LOGIN_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -10351,7 +11822,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "OtpLoginResult": {
       "type": "object",
@@ -10361,7 +11837,9 @@
           "description": "Signed JWT containing an expiry, public key, session type, user id, and organization id"
         }
       },
-      "required": ["session"]
+      "required": [
+        "session"
+      ]
     },
     "Outcome": {
       "type": "string",
@@ -10393,7 +11871,9 @@
     },
     "PathFormat": {
       "type": "string",
-      "enum": ["PATH_FORMAT_BIP32"]
+      "enum": [
+        "PATH_FORMAT_BIP32"
+      ]
     },
     "PayloadEncoding": {
       "type": "string",
@@ -10569,14 +12049,19 @@
         },
         "type": {
           "type": "string",
-          "enum": ["public-key"]
+          "enum": [
+            "public-key"
+          ]
         },
         "rawId": {
           "type": "string"
         },
         "authenticatorAttachment": {
           "type": "string",
-          "enum": ["cross-platform", "platform"],
+          "enum": [
+            "cross-platform",
+            "platform"
+          ],
           "x-nullable": true
         },
         "response": {
@@ -10586,7 +12071,13 @@
           "$ref": "#/definitions/SimpleClientExtensionResults"
         }
       },
-      "required": ["id", "type", "rawId", "response", "clientExtensionResults"]
+      "required": [
+        "id",
+        "type",
+        "rawId",
+        "response",
+        "clientExtensionResults"
+      ]
     },
     "RecoverUserIntent": {
       "type": "object",
@@ -10600,14 +12091,19 @@
           "description": "Unique identifier for the user performing recovery."
         }
       },
-      "required": ["authenticator", "userId"]
+      "required": [
+        "authenticator",
+        "userId"
+      ]
     },
     "RecoverUserRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_RECOVER_USER"]
+          "enum": [
+            "ACTIVITY_TYPE_RECOVER_USER"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -10625,7 +12121,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "RecoverUserResult": {
       "type": "object",
@@ -10638,7 +12139,9 @@
           "description": "ID of the authenticator created."
         }
       },
-      "required": ["authenticatorId"]
+      "required": [
+        "authenticatorId"
+      ]
     },
     "RejectActivityIntent": {
       "type": "object",
@@ -10648,14 +12151,18 @@
           "description": "An artifact verifying a User's action."
         }
       },
-      "required": ["fingerprint"]
+      "required": [
+        "fingerprint"
+      ]
     },
     "RejectActivityRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_REJECT_ACTIVITY"]
+          "enum": [
+            "ACTIVITY_TYPE_REJECT_ACTIVITY"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -10673,7 +12180,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "RemoveOrganizationFeatureIntent": {
       "type": "object",
@@ -10683,14 +12195,18 @@
           "description": "Name of the feature to remove"
         }
       },
-      "required": ["name"]
+      "required": [
+        "name"
+      ]
     },
     "RemoveOrganizationFeatureRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_REMOVE_ORGANIZATION_FEATURE"]
+          "enum": [
+            "ACTIVITY_TYPE_REMOVE_ORGANIZATION_FEATURE"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -10708,7 +12224,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "RemoveOrganizationFeatureResult": {
       "type": "object",
@@ -10722,7 +12243,9 @@
           "description": "Resulting list of organization features."
         }
       },
-      "required": ["features"]
+      "required": [
+        "features"
+      ]
     },
     "Result": {
       "type": "object",
@@ -11084,7 +12607,11 @@
           "description": "A list of Authenticator parameters. This field, if not needed, should be an empty array in your request body."
         }
       },
-      "required": ["userName", "apiKeys", "authenticators"]
+      "required": [
+        "userName",
+        "apiKeys",
+        "authenticators"
+      ]
     },
     "RootUserParamsV2": {
       "type": "object",
@@ -11123,7 +12650,12 @@
           "description": "A list of Oauth providers. This field, if not needed, should be an empty array in your request body."
         }
       },
-      "required": ["userName", "apiKeys", "authenticators", "oauthProviders"]
+      "required": [
+        "userName",
+        "apiKeys",
+        "authenticators",
+        "oauthProviders"
+      ]
     },
     "RootUserParamsV3": {
       "type": "object",
@@ -11162,7 +12694,12 @@
           "description": "A list of Oauth providers. This field, if not needed, should be an empty array in your request body."
         }
       },
-      "required": ["userName", "apiKeys", "authenticators", "oauthProviders"]
+      "required": [
+        "userName",
+        "apiKeys",
+        "authenticators",
+        "oauthProviders"
+      ]
     },
     "RootUserParamsV4": {
       "type": "object",
@@ -11206,7 +12743,12 @@
           "description": "A list of Oauth providers. This field, if not needed, should be an empty array in your request body."
         }
       },
-      "required": ["userName", "apiKeys", "authenticators", "oauthProviders"]
+      "required": [
+        "userName",
+        "apiKeys",
+        "authenticators",
+        "oauthProviders"
+      ]
     },
     "Selector": {
       "type": "object",
@@ -11252,14 +12794,19 @@
           "description": "Optional value for the feature. Will override existing values if feature is already set."
         }
       },
-      "required": ["name", "value"]
+      "required": [
+        "name",
+        "value"
+      ]
     },
     "SetOrganizationFeatureRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_SET_ORGANIZATION_FEATURE"]
+          "enum": [
+            "ACTIVITY_TYPE_SET_ORGANIZATION_FEATURE"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -11277,7 +12824,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "SetOrganizationFeatureResult": {
       "type": "object",
@@ -11291,7 +12843,9 @@
           "description": "Resulting list of organization features."
         }
       },
-      "required": ["features"]
+      "required": [
+        "features"
+      ]
     },
     "SetPaymentMethodIntent": {
       "type": "object",
@@ -11346,7 +12900,11 @@
           "description": "The name associated with the credit card."
         }
       },
-      "required": ["paymentMethodId", "cardHolderEmail", "cardHolderName"]
+      "required": [
+        "paymentMethodId",
+        "cardHolderEmail",
+        "cardHolderName"
+      ]
     },
     "SetPaymentMethodResult": {
       "type": "object",
@@ -11364,7 +12922,11 @@
           "description": "The email address associated with the payment method."
         }
       },
-      "required": ["lastFour", "cardHolderName", "cardHolderEmail"]
+      "required": [
+        "lastFour",
+        "cardHolderName",
+        "cardHolderEmail"
+      ]
     },
     "SignRawPayloadIntent": {
       "type": "object",
@@ -11386,7 +12948,12 @@
           "description": "Hash function to apply to payload bytes before signing. This field must be set to HASH_FUNCTION_NOT_APPLICABLE for EdDSA/ed25519 signature requests; configurable payload hashing is not supported by RFC 8032."
         }
       },
-      "required": ["privateKeyId", "payload", "encoding", "hashFunction"]
+      "required": [
+        "privateKeyId",
+        "payload",
+        "encoding",
+        "hashFunction"
+      ]
     },
     "SignRawPayloadIntentV2": {
       "type": "object",
@@ -11408,14 +12975,21 @@
           "description": "Hash function to apply to payload bytes before signing. This field must be set to HASH_FUNCTION_NOT_APPLICABLE for EdDSA/ed25519 signature requests; configurable payload hashing is not supported by RFC 8032."
         }
       },
-      "required": ["signWith", "payload", "encoding", "hashFunction"]
+      "required": [
+        "signWith",
+        "payload",
+        "encoding",
+        "hashFunction"
+      ]
     },
     "SignRawPayloadRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_SIGN_RAW_PAYLOAD_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_SIGN_RAW_PAYLOAD_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -11433,7 +13007,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "SignRawPayloadResult": {
       "type": "object",
@@ -11451,7 +13030,11 @@
           "description": "Component of an ECSDA signature."
         }
       },
-      "required": ["r", "s", "v"]
+      "required": [
+        "r",
+        "s",
+        "v"
+      ]
     },
     "SignRawPayloadsIntent": {
       "type": "object",
@@ -11476,14 +13059,21 @@
           "description": "Hash function to apply to payload bytes before signing. This field must be set to HASH_FUNCTION_NOT_APPLICABLE for EdDSA/ed25519 signature requests; configurable payload hashing is not supported by RFC 8032."
         }
       },
-      "required": ["signWith", "payloads", "encoding", "hashFunction"]
+      "required": [
+        "signWith",
+        "payloads",
+        "encoding",
+        "hashFunction"
+      ]
     },
     "SignRawPayloadsRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_SIGN_RAW_PAYLOADS"]
+          "enum": [
+            "ACTIVITY_TYPE_SIGN_RAW_PAYLOADS"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -11501,7 +13091,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "SignRawPayloadsResult": {
       "type": "object",
@@ -11530,7 +13125,11 @@
           "$ref": "#/definitions/TransactionType"
         }
       },
-      "required": ["privateKeyId", "unsignedTransaction", "type"]
+      "required": [
+        "privateKeyId",
+        "unsignedTransaction",
+        "type"
+      ]
     },
     "SignTransactionIntentV2": {
       "type": "object",
@@ -11547,14 +13146,20 @@
           "$ref": "#/definitions/TransactionType"
         }
       },
-      "required": ["signWith", "unsignedTransaction", "type"]
+      "required": [
+        "signWith",
+        "unsignedTransaction",
+        "type"
+      ]
     },
     "SignTransactionRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_SIGN_TRANSACTION_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_SIGN_TRANSACTION_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -11572,7 +13177,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "SignTransactionResult": {
       "type": "object",
@@ -11581,7 +13191,9 @@
           "type": "string"
         }
       },
-      "required": ["signedTransaction"]
+      "required": [
+        "signedTransaction"
+      ]
     },
     "SignupUsage": {
       "type": "object",
@@ -11682,14 +13294,20 @@
           "description": "user-provided blockhash for replay protection / deadline control. If omitted and sponsor=true, we fetch a fresh blockhash during execution"
         }
       },
-      "required": ["unsignedTransaction", "signWith", "caip2"]
+      "required": [
+        "unsignedTransaction",
+        "signWith",
+        "caip2"
+      ]
     },
     "SolSendTransactionRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_SOL_SEND_TRANSACTION"]
+          "enum": [
+            "ACTIVITY_TYPE_SOL_SEND_TRANSACTION"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -11707,7 +13325,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "SolSendTransactionResult": {
       "type": "object",
@@ -11717,7 +13340,9 @@
           "description": "The send_transaction_status ID associated with the transaction submission"
         }
       },
-      "required": ["sendTransactionStatusId"]
+      "required": [
+        "sendTransactionStatusId"
+      ]
     },
     "StampLoginIntent": {
       "type": "object",
@@ -11737,14 +13362,18 @@
           "description": "Invalidate all other previously generated Login API keys"
         }
       },
-      "required": ["publicKey"]
+      "required": [
+        "publicKey"
+      ]
     },
     "StampLoginRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_STAMP_LOGIN"]
+          "enum": [
+            "ACTIVITY_TYPE_STAMP_LOGIN"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -11762,7 +13391,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "StampLoginResult": {
       "type": "object",
@@ -11772,7 +13406,9 @@
           "description": "Signed JWT containing an expiry, public key, session type, user id, and organization id"
         }
       },
-      "required": ["session"]
+      "required": [
+        "session"
+      ]
     },
     "Status": {
       "type": "object",
@@ -11795,7 +13431,10 @@
     },
     "TagType": {
       "type": "string",
-      "enum": ["TAG_TYPE_USER", "TAG_TYPE_PRIVATE_KEY"]
+      "enum": [
+        "TAG_TYPE_USER",
+        "TAG_TYPE_PRIVATE_KEY"
+      ]
     },
     "TokenUsage": {
       "type": "object",
@@ -11815,7 +13454,10 @@
           "$ref": "#/definitions/LoginUsage"
         }
       },
-      "required": ["type", "tokenId"]
+      "required": [
+        "type",
+        "tokenId"
+      ]
     },
     "TransactionType": {
       "type": "string",
@@ -11839,7 +13481,10 @@
           "description": "Signature from the operator approving the manifest"
         }
       },
-      "required": ["operatorId", "signature"]
+      "required": [
+        "operatorId",
+        "signature"
+      ]
     },
     "TvcOperatorParams": {
       "type": "object",
@@ -11853,7 +13498,10 @@
           "description": "Public key for this operator"
         }
       },
-      "required": ["name", "publicKey"]
+      "required": [
+        "name",
+        "publicKey"
+      ]
     },
     "TvcOperatorSetParams": {
       "type": "object",
@@ -11883,7 +13531,10 @@
           "description": "The threshold of operators needed to reach consensus in this new Operator Set"
         }
       },
-      "required": ["name", "threshold"]
+      "required": [
+        "name",
+        "threshold"
+      ]
     },
     "TxError": {
       "type": "object",
@@ -11928,7 +13579,9 @@
           "description": "Additional origins requests are allowed from besides 0xkey origins"
         }
       },
-      "required": ["allowedOrigins"]
+      "required": [
+        "allowedOrigins"
+      ]
     },
     "UpdateAllowedOriginsResult": {
       "type": "object"
@@ -12084,7 +13737,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_FIAT_ON_RAMP_CREDENTIAL"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_FIAT_ON_RAMP_CREDENTIAL"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12102,7 +13757,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateFiatOnRampCredentialResult": {
       "type": "object",
@@ -12112,7 +13772,9 @@
           "description": "Unique identifier of the Fiat On-Ramp credential that was updated"
         }
       },
-      "required": ["fiatOnRampCredentialId"]
+      "required": [
+        "fiatOnRampCredentialId"
+      ]
     },
     "UpdateOauth2CredentialIntent": {
       "type": "object",
@@ -12146,7 +13808,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_OAUTH2_CREDENTIAL"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_OAUTH2_CREDENTIAL"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12164,7 +13828,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateOauth2CredentialResult": {
       "type": "object",
@@ -12174,7 +13843,9 @@
           "description": "Unique identifier of the OAuth 2.0 credential that was updated"
         }
       },
-      "required": ["oauth2CredentialId"]
+      "required": [
+        "oauth2CredentialId"
+      ]
     },
     "UpdatePolicyIntent": {
       "type": "object",
@@ -12209,7 +13880,9 @@
           "description": "Accompanying notes for a Policy (optional)."
         }
       },
-      "required": ["policyId"]
+      "required": [
+        "policyId"
+      ]
     },
     "UpdatePolicyIntentV2": {
       "type": "object",
@@ -12244,14 +13917,18 @@
           "description": "Accompanying notes for a Policy (optional)."
         }
       },
-      "required": ["policyId"]
+      "required": [
+        "policyId"
+      ]
     },
     "UpdatePolicyRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_POLICY_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_POLICY_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12269,7 +13946,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdatePolicyResult": {
       "type": "object",
@@ -12279,7 +13961,9 @@
           "description": "Unique identifier for a given Policy."
         }
       },
-      "required": ["policyId"]
+      "required": [
+        "policyId"
+      ]
     },
     "UpdatePolicyResultV2": {
       "type": "object",
@@ -12289,7 +13973,9 @@
           "description": "Unique identifier for a given Policy."
         }
       },
-      "required": ["policyId"]
+      "required": [
+        "policyId"
+      ]
     },
     "UpdatePrivateKeyTagIntent": {
       "type": "object",
@@ -12318,14 +14004,20 @@
           "description": "A list of Private Key IDs to remove this tag from."
         }
       },
-      "required": ["privateKeyTagId", "addPrivateKeyIds", "removePrivateKeyIds"]
+      "required": [
+        "privateKeyTagId",
+        "addPrivateKeyIds",
+        "removePrivateKeyIds"
+      ]
     },
     "UpdatePrivateKeyTagRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_PRIVATE_KEY_TAG"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_PRIVATE_KEY_TAG"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12343,7 +14035,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdatePrivateKeyTagResult": {
       "type": "object",
@@ -12353,7 +14050,9 @@
           "description": "Unique identifier for a given Private Key Tag."
         }
       },
-      "required": ["privateKeyTagId"]
+      "required": [
+        "privateKeyTagId"
+      ]
     },
     "UpdateRootQuorumIntent": {
       "type": "object",
@@ -12371,14 +14070,19 @@
           "description": "The unique identifiers of users who comprise the quorum set."
         }
       },
-      "required": ["threshold", "userIds"]
+      "required": [
+        "threshold",
+        "userIds"
+      ]
     },
     "UpdateRootQuorumRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_ROOT_QUORUM"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_ROOT_QUORUM"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12396,7 +14100,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateRootQuorumResult": {
       "type": "object"
@@ -12418,14 +14127,19 @@
           "description": "Signed JWT containing a unique id, expiry, verification type, contact"
         }
       },
-      "required": ["userId", "userEmail"]
+      "required": [
+        "userId",
+        "userEmail"
+      ]
     },
     "UpdateUserEmailRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_USER_EMAIL"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_USER_EMAIL"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12443,7 +14157,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateUserEmailResult": {
       "type": "object",
@@ -12453,7 +14172,9 @@
           "description": "Unique identifier of the User whose email was updated."
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "UpdateUserIntent": {
       "type": "object",
@@ -12485,7 +14206,9 @@
           "description": "The user's phone number in E.164 format e.g. +13214567890"
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "UpdateUserNameIntent": {
       "type": "object",
@@ -12499,14 +14222,19 @@
           "description": "Human-readable name for a User."
         }
       },
-      "required": ["userId", "userName"]
+      "required": [
+        "userId",
+        "userName"
+      ]
     },
     "UpdateUserNameRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_USER_NAME"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_USER_NAME"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12524,7 +14252,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateUserNameResult": {
       "type": "object",
@@ -12534,7 +14267,9 @@
           "description": "Unique identifier of the User whose name was updated."
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "UpdateUserPhoneNumberIntent": {
       "type": "object",
@@ -12553,14 +14288,19 @@
           "description": "Signed JWT containing a unique id, expiry, verification type, contact"
         }
       },
-      "required": ["userId", "userPhoneNumber"]
+      "required": [
+        "userId",
+        "userPhoneNumber"
+      ]
     },
     "UpdateUserPhoneNumberRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_USER_PHONE_NUMBER"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_USER_PHONE_NUMBER"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12578,7 +14318,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateUserPhoneNumberResult": {
       "type": "object",
@@ -12588,14 +14333,18 @@
           "description": "Unique identifier of the User whose phone number was updated."
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "UpdateUserRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_USER"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_USER"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12613,7 +14362,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateUserResult": {
       "type": "object",
@@ -12623,7 +14377,9 @@
           "description": "A User ID."
         }
       },
-      "required": ["userId"]
+      "required": [
+        "userId"
+      ]
     },
     "UpdateUserTagIntent": {
       "type": "object",
@@ -12652,14 +14408,20 @@
           "description": "A list of User IDs to remove this tag from."
         }
       },
-      "required": ["userTagId", "addUserIds", "removeUserIds"]
+      "required": [
+        "userTagId",
+        "addUserIds",
+        "removeUserIds"
+      ]
     },
     "UpdateUserTagRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_USER_TAG"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_USER_TAG"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12677,7 +14439,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateUserTagResult": {
       "type": "object",
@@ -12687,7 +14454,9 @@
           "description": "Unique identifier for a given User Tag."
         }
       },
-      "required": ["userTagId"]
+      "required": [
+        "userTagId"
+      ]
     },
     "UpdateWalletIntent": {
       "type": "object",
@@ -12701,14 +14470,18 @@
           "description": "Human-readable name for a Wallet."
         }
       },
-      "required": ["walletId"]
+      "required": [
+        "walletId"
+      ]
     },
     "UpdateWalletRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_UPDATE_WALLET"]
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_WALLET"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -12726,7 +14499,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "UpdateWalletResult": {
       "type": "object",
@@ -12736,7 +14514,9 @@
           "description": "A Wallet ID."
         }
       },
-      "required": ["walletId"]
+      "required": [
+        "walletId"
+      ]
     },
     "UpsertGasUsageConfigIntent": {
       "type": "object",
@@ -12773,11 +14553,16 @@
           "description": "Unique identifier for the gas usage configuration that was created or updated."
         }
       },
-      "required": ["gasUsageConfigId"]
+      "required": [
+        "gasUsageConfigId"
+      ]
     },
     "UsageType": {
       "type": "string",
-      "enum": ["USAGE_TYPE_SIGNUP", "USAGE_TYPE_LOGIN"]
+      "enum": [
+        "USAGE_TYPE_SIGNUP",
+        "USAGE_TYPE_LOGIN"
+      ]
     },
     "User": {
       "type": "object",
@@ -12933,7 +14718,12 @@
           "description": "A list of User Tag IDs. This field, if not needed, should be an empty array in your request body."
         }
       },
-      "required": ["userName", "apiKeys", "authenticators", "userTags"]
+      "required": [
+        "userName",
+        "apiKeys",
+        "authenticators",
+        "userTags"
+      ]
     },
     "UserParamsV3": {
       "type": "object",
@@ -13014,7 +14804,10 @@
           "description": "Client-side public key generated by the user, which will be added to the JWT response and verified in subsequent requests via a client proof signature"
         }
       },
-      "required": ["otpId", "otpCode"]
+      "required": [
+        "otpId",
+        "otpCode"
+      ]
     },
     "VerifyOtpIntentV2": {
       "type": "object",
@@ -13033,14 +14826,19 @@
           "description": "Expiration window (in seconds) indicating how long the verification token is valid for. If not provided, a default of 1 hour will be used. Maximum value is 86400 seconds (24 hours)"
         }
       },
-      "required": ["otpId", "encryptedOtpBundle"]
+      "required": [
+        "otpId",
+        "encryptedOtpBundle"
+      ]
     },
     "VerifyOtpRequest": {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ACTIVITY_TYPE_VERIFY_OTP_V2"]
+          "enum": [
+            "ACTIVITY_TYPE_VERIFY_OTP_V2"
+          ]
         },
         "timestampMs": {
           "type": "string",
@@ -13058,7 +14856,12 @@
           "x-nullable": true
         }
       },
-      "required": ["type", "timestampMs", "organizationId", "parameters"]
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
     },
     "VerifyOtpResult": {
       "type": "object",
@@ -13068,7 +14871,9 @@
           "description": "Signed JWT containing a unique id, expiry, verification type, contact. Verification status of a user is updated when the token is consumed (in OTP_LOGIN requests)"
         }
       },
-      "required": ["verificationToken"]
+      "required": [
+        "verificationToken"
+      ]
     },
     "Vote": {
       "type": "object",
@@ -13091,7 +14896,10 @@
         },
         "selection": {
           "type": "string",
-          "enum": ["VOTE_SELECTION_APPROVED", "VOTE_SELECTION_REJECTED"]
+          "enum": [
+            "VOTE_SELECTION_APPROVED",
+            "VOTE_SELECTION_REJECTED"
+          ]
         },
         "message": {
           "type": "string",
@@ -13246,7 +15054,12 @@
           "description": "Address format used to generate a wallet Acccount."
         }
       },
-      "required": ["curve", "pathFormat", "path", "addressFormat"]
+      "required": [
+        "curve",
+        "pathFormat",
+        "path",
+        "addressFormat"
+      ]
     },
     "WalletKitSettingsParams": {
       "type": "object",
@@ -13296,7 +15109,10 @@
           "description": "Length of mnemonic to generate the Wallet seed. Defaults to 12. Accepted values: 12, 15, 18, 21, 24."
         }
       },
-      "required": ["walletName", "accounts"]
+      "required": [
+        "walletName",
+        "accounts"
+      ]
     },
     "WalletResult": {
       "type": "object",
@@ -13312,7 +15128,10 @@
           "description": "A list of account addresses."
         }
       },
-      "required": ["walletId", "addresses"]
+      "required": [
+        "walletId",
+        "addresses"
+      ]
     },
     "WebAuthnStamp": {
       "type": "object",
@@ -13416,7 +15235,9 @@
     },
     "data.v1.SignatureScheme": {
       "type": "string",
-      "enum": ["SIGNATURE_SCHEME_EPHEMERAL_KEY_P256"]
+      "enum": [
+        "SIGNATURE_SCHEME_EPHEMERAL_KEY_P256"
+      ]
     },
     "data.v1.SmartContractInterface": {
       "type": "object",
@@ -13479,7 +15300,10 @@
           "$ref": "#/definitions/CredentialType"
         }
       },
-      "required": ["publicKey", "type"]
+      "required": [
+        "publicKey",
+        "type"
+      ]
     },
     "external.data.v1.Quorum": {
       "type": "object",
@@ -13497,7 +15321,10 @@
           "description": "Unique identifiers of quorum set members."
         }
       },
-      "required": ["threshold", "userIds"]
+      "required": [
+        "threshold",
+        "userIds"
+      ]
     },
     "external.data.v1.Timestamp": {
       "type": "object",
@@ -13509,7 +15336,10 @@
           "type": "string"
         }
       },
-      "required": ["seconds", "nanos"]
+      "required": [
+        "seconds",
+        "nanos"
+      ]
     },
     "v1.Tag": {
       "type": "object",
@@ -13532,7 +15362,585 @@
           "$ref": "#/definitions/external.data.v1.Timestamp"
         }
       },
-      "required": ["tagId", "tagName", "tagType", "createdAt", "updatedAt"]
+      "required": [
+        "tagId",
+        "tagName",
+        "tagType",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "GetSessionProfilesRequest": {
+      "type": "object",
+      "properties": {
+        "organizationId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "organizationId"
+      ]
+    },
+    "GetMfaPolicyResponse": {
+      "type": "object",
+      "properties": {
+        "mfaPolicy": {
+          "$ref": "#/definitions/MfaPolicy"
+        }
+      },
+      "required": [
+        "mfaPolicy"
+      ]
+    },
+    "MfaPolicy": {
+      "type": "object",
+      "properties": {
+        "mfaPolicyId": {
+          "type": "string"
+        },
+        "mfaPolicyName": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "requiredAuthenticationMethods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/RequiredAuthenticationMethod"
+          }
+        },
+        "order": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "createdAt": {
+          "$ref": "#/definitions/Timestamp"
+        },
+        "updatedAt": {
+          "$ref": "#/definitions/Timestamp"
+        }
+      },
+      "required": [
+        "mfaPolicyId",
+        "mfaPolicyName",
+        "condition",
+        "requiredAuthenticationMethods",
+        "order",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Timestamp": {
+      "type": "object",
+      "properties": {
+        "seconds": {
+          "type": "string",
+          "title": "Stringified int"
+        },
+        "nanos": {
+          "type": "string",
+          "title": "Stringified int"
+        }
+      },
+      "required": [
+        "seconds",
+        "nanos"
+      ]
+    },
+    "RequiredAuthenticationMethod": {
+      "type": "object",
+      "properties": {
+        "any": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/AuthenticationMethod"
+          }
+        }
+      },
+      "required": [
+        "any"
+      ]
+    },
+    "AuthenticationMethod": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/AuthenticationType"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "AuthenticationType": {
+      "type": "string",
+      "enum": [
+        "AUTHENTICATION_TYPE_UNSPECIFIED",
+        "AUTHENTICATION_TYPE_EMAIL_OTP",
+        "AUTHENTICATION_TYPE_SMS_OTP",
+        "AUTHENTICATION_TYPE_PASSKEY",
+        "AUTHENTICATION_TYPE_API_KEY",
+        "AUTHENTICATION_TYPE_OAUTH",
+        "AUTHENTICATION_TYPE_SESSION"
+      ],
+      "default": "AUTHENTICATION_TYPE_UNSPECIFIED"
+    },
+    "DeleteMfaPolicyRequest": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "ACTIVITY_TYPE_DELETE_MFA_POLICY"
+          ]
+        },
+        "timestampMs": {
+          "type": "string"
+        },
+        "organizationId": {
+          "type": "string"
+        },
+        "parameters": {
+          "$ref": "#/definitions/DeleteMfaPolicyIntent"
+        }
+      },
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
+    },
+    "DeleteMfaPolicyIntent": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "mfaPolicyId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "userId",
+        "mfaPolicyId"
+      ]
+    },
+    "GetSessionProfileResponse": {
+      "type": "object",
+      "properties": {
+        "sessionProfile": {
+          "$ref": "#/definitions/SessionProfile"
+        }
+      },
+      "required": [
+        "sessionProfile"
+      ]
+    },
+    "SessionProfile": {
+      "type": "object",
+      "properties": {
+        "sessionProfileId": {
+          "type": "string"
+        },
+        "sessionProfileName": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "expirationSeconds": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "createdAt": {
+          "$ref": "#/definitions/Timestamp"
+        },
+        "updatedAt": {
+          "$ref": "#/definitions/Timestamp"
+        }
+      },
+      "required": [
+        "sessionProfileId",
+        "sessionProfileName",
+        "scope",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "GetMfaPoliciesResponse": {
+      "type": "object",
+      "properties": {
+        "mfaPolicies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/MfaPolicy"
+          }
+        }
+      },
+      "required": [
+        "mfaPolicies"
+      ]
+    },
+    "CreateSessionProfileRequest": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_SESSION_PROFILE"
+          ]
+        },
+        "timestampMs": {
+          "type": "string"
+        },
+        "organizationId": {
+          "type": "string"
+        },
+        "parameters": {
+          "$ref": "#/definitions/CreateSessionProfileIntent"
+        }
+      },
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
+    },
+    "CreateSessionProfileIntent": {
+      "type": "object",
+      "properties": {
+        "sessionProfileName": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "expirationSeconds": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sessionProfileName",
+        "scope"
+      ]
+    },
+    "GetMfaStatusRequest": {
+      "type": "object",
+      "properties": {
+        "organizationId": {
+          "type": "string"
+        },
+        "activityId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "organizationId",
+        "activityId"
+      ]
+    },
+    "GetSessionProfileRequest": {
+      "type": "object",
+      "properties": {
+        "organizationId": {
+          "type": "string"
+        },
+        "sessionProfileId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "organizationId",
+        "sessionProfileId"
+      ]
+    },
+    "GetMfaStatusResponse": {
+      "type": "object",
+      "properties": {
+        "mfaStatuses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/MfaStatus"
+          }
+        }
+      },
+      "required": [
+        "mfaStatuses"
+      ]
+    },
+    "MfaStatus": {
+      "type": "object",
+      "properties": {
+        "mfaPolicyId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "satisfied": {
+          "type": "boolean"
+        },
+        "satisfiedMethods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/AuthenticationMethod"
+          }
+        },
+        "requiredMethods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/RequiredAuthenticationMethod"
+          }
+        }
+      },
+      "required": [
+        "mfaPolicyId",
+        "userId",
+        "satisfied",
+        "satisfiedMethods",
+        "requiredMethods"
+      ]
+    },
+    "UpdateMfaPolicyRequest": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "ACTIVITY_TYPE_UPDATE_MFA_POLICY"
+          ]
+        },
+        "timestampMs": {
+          "type": "string"
+        },
+        "organizationId": {
+          "type": "string"
+        },
+        "parameters": {
+          "$ref": "#/definitions/UpdateMfaPolicyIntent"
+        }
+      },
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
+    },
+    "UpdateMfaPolicyIntent": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "mfaPolicyId": {
+          "type": "string"
+        },
+        "mfaPolicyName": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "requiredAuthenticationMethods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/RequiredAuthenticationMethodParams"
+          }
+        },
+        "order": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "userId",
+        "mfaPolicyId"
+      ]
+    },
+    "RequiredAuthenticationMethodParams": {
+      "type": "object",
+      "properties": {
+        "any": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/AuthenticationMethodParams"
+          }
+        }
+      },
+      "required": [
+        "any"
+      ]
+    },
+    "AuthenticationMethodParams": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/AuthenticationType"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "GetMfaPolicyRequest": {
+      "type": "object",
+      "properties": {
+        "organizationId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "mfaPolicyId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "organizationId",
+        "userId",
+        "mfaPolicyId"
+      ]
+    },
+    "GetSessionProfilesResponse": {
+      "type": "object",
+      "properties": {
+        "sessionProfiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/SessionProfile"
+          }
+        }
+      },
+      "required": [
+        "sessionProfiles"
+      ]
+    },
+    "CreateMfaPolicyRequest": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "ACTIVITY_TYPE_CREATE_MFA_POLICY"
+          ]
+        },
+        "timestampMs": {
+          "type": "string"
+        },
+        "organizationId": {
+          "type": "string"
+        },
+        "parameters": {
+          "$ref": "#/definitions/CreateMfaPolicyIntent"
+        }
+      },
+      "required": [
+        "type",
+        "timestampMs",
+        "organizationId",
+        "parameters"
+      ]
+    },
+    "CreateMfaPolicyIntent": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "mfaPolicyName": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "requiredAuthenticationMethods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/RequiredAuthenticationMethodParams"
+          }
+        },
+        "order": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "userId",
+        "mfaPolicyName",
+        "condition",
+        "requiredAuthenticationMethods",
+        "order"
+      ]
+    },
+    "GetMfaPoliciesRequest": {
+      "type": "object",
+      "properties": {
+        "organizationId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "organizationId",
+        "userId"
+      ]
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
     }
   },
   "securityDefinitions": {
@@ -13558,23 +15966,45 @@
   "x-tagGroups": [
     {
       "name": "ORGANIZATIONS",
-      "tags": ["Organizations", "Invitations", "Policies", "Features"]
+      "tags": [
+        "Organizations",
+        "Invitations",
+        "Policies",
+        "Features"
+      ]
     },
     {
       "name": "WALLETS AND PRIVATE KEYS",
-      "tags": ["Wallets", "Signing", "Private Keys", "Private Key Tags"]
+      "tags": [
+        "Wallets",
+        "Signing",
+        "Private Keys",
+        "Private Key Tags"
+      ]
     },
     {
       "name": "USERS",
-      "tags": ["Users", "User Tags", "User Recovery", "User Auth"]
+      "tags": [
+        "Users",
+        "User Tags",
+        "User Recovery",
+        "User Auth"
+      ]
     },
     {
       "name": "CREDENTIALS",
-      "tags": ["Authenticators", "API Keys", "Sessions"]
+      "tags": [
+        "Authenticators",
+        "API Keys",
+        "Sessions"
+      ]
     },
     {
       "name": "ACTIVITIES",
-      "tags": ["Activities", "Consensus"]
+      "tags": [
+        "Activities",
+        "Consensus"
+      ]
     }
   ]
 }

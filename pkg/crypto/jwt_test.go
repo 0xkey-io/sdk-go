@@ -109,6 +109,69 @@ func TestVerifySessionJwtSignature_WithCustomKey(t *testing.T) {
 	}
 }
 
+func TestVerifyAndDecodeSessionClaims(t *testing.T) {
+	token, publicKey := mustCreateSessionJWTWithClaims(t, map[string]any{
+		"sub":                "user-id",
+		"org":                "org-id",
+		"type":               "SESSION_TYPE_READ_WRITE",
+		"pub":                "session-public-key",
+		"exp":                time.Now().Add(time.Hour).Unix(),
+		"session_profile_id": "profile-id",
+		"scope":              []string{"root:write"},
+	})
+
+	claims, err := VerifyAndDecodeSessionClaims(token, publicKey)
+	if err != nil {
+		t.Fatalf("VerifyAndDecodeSessionClaims() error = %v", err)
+	}
+	if claims.UserID != "user-id" || claims.OrganizationID != "org-id" || claims.SessionProfileID != "profile-id" {
+		t.Fatalf("unexpected claims: %+v", claims)
+	}
+	if claims.SessionType != "SESSION_TYPE_READ_WRITE" || claims.PublicKey != "session-public-key" {
+		t.Fatalf("unexpected session metadata: %+v", claims)
+	}
+}
+
+func TestVerifyAndDecodeSessionClaimsRejectsConflictingAliases(t *testing.T) {
+	token, publicKey := mustCreateSessionJWTWithClaims(t, map[string]any{
+		"sub": "user-id", "org": "org-id", "exp": time.Now().Add(time.Hour).Unix(),
+		"session_profile_id": "profile-a", "sessionProfileId": "profile-b",
+	})
+
+	if _, err := VerifyAndDecodeSessionClaims(token, publicKey); err == nil {
+		t.Fatal("expected conflicting profile aliases to fail closed")
+	}
+}
+
+func mustCreateSessionJWTWithClaims(t *testing.T, claims map[string]any) (string, string) {
+	t.Helper()
+	key, err := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
+	if err != nil {
+		t.Fatalf("generate key: %v", err)
+	}
+	header, err := json.Marshal(map[string]string{"alg": "ES256", "typ": "JWT"})
+	if err != nil {
+		t.Fatalf("marshal header: %v", err)
+	}
+	payload, err := json.Marshal(claims)
+	if err != nil {
+		t.Fatalf("marshal claims: %v", err)
+	}
+	signingInput := base64.RawURLEncoding.EncodeToString(header) + "." + base64.RawURLEncoding.EncodeToString(payload)
+	digest := sha256.Sum256([]byte(signingInput))
+	r, s, err := ecdsa.Sign(rand.Reader, key, digest[:])
+	if err != nil {
+		t.Fatalf("sign: %v", err)
+	}
+	sig := make([]byte, 64)
+	rb, sb := r.Bytes(), s.Bytes()
+	copy(sig[32-len(rb):32], rb)
+	copy(sig[64-len(sb):], sb)
+	//nolint:staticcheck
+	pub := elliptic.Marshal(elliptic.P256(), key.PublicKey.X, key.PublicKey.Y)
+	return signingInput + "." + base64.RawURLEncoding.EncodeToString(sig), hex.EncodeToString(pub)
+}
+
 func TestVerifyOtpVerificationToken(t *testing.T) {
 	tests := []struct {
 		name    string

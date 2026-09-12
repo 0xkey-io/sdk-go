@@ -13,12 +13,14 @@ import (
 	"github.com/0xkey-io/sdk-go/pkg/api/client/activities"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/api_keys"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/app_proof"
+	"github.com/0xkey-io/sdk-go/pkg/api/client/attestation"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/authenticators"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/boot_proof"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/broadcasting"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/consensus"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/features"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/invitations"
+	"github.com/0xkey-io/sdk-go/pkg/api/client/m_f_a_policies"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/on_ramp"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/operations"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/organizations"
@@ -26,6 +28,7 @@ import (
 	"github.com/0xkey-io/sdk-go/pkg/api/client/private_key_tags"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/private_keys"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/send_transactions"
+	"github.com/0xkey-io/sdk-go/pkg/api/client/session_profiles"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/sessions"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/signing"
 	"github.com/0xkey-io/sdk-go/pkg/api/client/user_auth"
@@ -36,7 +39,7 @@ import (
 	"github.com/0xkey-io/sdk-go/pkg/api/client/wallets"
 )
 
-// Default 0xkey API HTTP client.
+// Default zero x key API HTTP client.
 var Default = NewHTTPClient(nil)
 
 const (
@@ -51,12 +54,12 @@ const (
 // DefaultSchemes are the default schemes found in Meta (info) section of spec file
 var DefaultSchemes = []string{"https"}
 
-// NewHTTPClient creates a new 0xkey API HTTP client.
+// NewHTTPClient creates a new zero x key API HTTP client.
 func NewHTTPClient(formats strfmt.Registry) *ZeroXKeyAPI {
 	return NewHTTPClientWithConfig(formats, nil)
 }
 
-// NewHTTPClientWithConfig creates a new 0xkey API HTTP client,
+// NewHTTPClientWithConfig creates a new zero x key API HTTP client,
 // using a customizable transport config.
 func NewHTTPClientWithConfig(formats strfmt.Registry, cfg *TransportConfig) *ZeroXKeyAPI {
 	// ensure nullable parameters have default
@@ -69,7 +72,7 @@ func NewHTTPClientWithConfig(formats strfmt.Registry, cfg *TransportConfig) *Zer
 	return New(transport, formats)
 }
 
-// New creates a new 0xkey API client
+// New creates a new zero x key API client
 func New(transport runtime.ClientTransport, formats strfmt.Registry) *ZeroXKeyAPI {
 	// ensure nullable parameters have default
 	if formats == nil {
@@ -81,12 +84,14 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *ZeroXKeyAP
 	cli.Activities = activities.New(transport, formats)
 	cli.APIKeys = api_keys.New(transport, formats)
 	cli.AppProof = app_proof.New(transport, formats)
+	cli.Attestation = attestation.New(transport, formats)
 	cli.Authenticators = authenticators.New(transport, formats)
 	cli.BootProof = boot_proof.New(transport, formats)
 	cli.Broadcasting = broadcasting.New(transport, formats)
 	cli.Consensus = consensus.New(transport, formats)
 	cli.Features = features.New(transport, formats)
 	cli.Invitations = invitations.New(transport, formats)
+	cli.MfaPolicies = m_f_a_policies.New(transport, formats)
 	cli.OnRamp = on_ramp.New(transport, formats)
 	cli.Operations = operations.New(transport, formats)
 	cli.Organizations = organizations.New(transport, formats)
@@ -94,6 +99,7 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *ZeroXKeyAP
 	cli.PrivateKeyTags = private_key_tags.New(transport, formats)
 	cli.PrivateKeys = private_keys.New(transport, formats)
 	cli.SendTransactions = send_transactions.New(transport, formats)
+	cli.SessionProfiles = session_profiles.New(transport, formats)
 	cli.Sessions = sessions.New(transport, formats)
 	cli.Signing = signing.New(transport, formats)
 	cli.UserAuth = user_auth.New(transport, formats)
@@ -144,13 +150,15 @@ func (cfg *TransportConfig) WithSchemes(schemes []string) *TransportConfig {
 	return cfg
 }
 
-// ZeroXKeyAPI is a client for 0xkey API
+// ZeroXKeyAPI is a client for zero x key API
 type ZeroXKeyAPI struct {
 	Activities activities.ClientService
 
 	APIKeys api_keys.ClientService
 
 	AppProof app_proof.ClientService
+
+	Attestation attestation.ClientService
 
 	Authenticators authenticators.ClientService
 
@@ -163,6 +171,8 @@ type ZeroXKeyAPI struct {
 	Features features.ClientService
 
 	Invitations invitations.ClientService
+
+	MfaPolicies m_f_a_policies.ClientService
 
 	OnRamp on_ramp.ClientService
 
@@ -177,6 +187,8 @@ type ZeroXKeyAPI struct {
 	PrivateKeys private_keys.ClientService
 
 	SendTransactions send_transactions.ClientService
+
+	SessionProfiles session_profiles.ClientService
 
 	Sessions sessions.ClientService
 
@@ -203,12 +215,14 @@ func (c *ZeroXKeyAPI) SetTransport(transport runtime.ClientTransport) {
 	c.Activities.SetTransport(transport)
 	c.APIKeys.SetTransport(transport)
 	c.AppProof.SetTransport(transport)
+	c.Attestation.SetTransport(transport)
 	c.Authenticators.SetTransport(transport)
 	c.BootProof.SetTransport(transport)
 	c.Broadcasting.SetTransport(transport)
 	c.Consensus.SetTransport(transport)
 	c.Features.SetTransport(transport)
 	c.Invitations.SetTransport(transport)
+	c.MfaPolicies.SetTransport(transport)
 	c.OnRamp.SetTransport(transport)
 	c.Operations.SetTransport(transport)
 	c.Organizations.SetTransport(transport)
@@ -216,6 +230,7 @@ func (c *ZeroXKeyAPI) SetTransport(transport runtime.ClientTransport) {
 	c.PrivateKeyTags.SetTransport(transport)
 	c.PrivateKeys.SetTransport(transport)
 	c.SendTransactions.SetTransport(transport)
+	c.SessionProfiles.SetTransport(transport)
 	c.Sessions.SetTransport(transport)
 	c.Signing.SetTransport(transport)
 	c.UserAuth.SetTransport(transport)

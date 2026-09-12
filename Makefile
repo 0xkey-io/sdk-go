@@ -21,9 +21,14 @@ lint:
 # Note: if you have multiple versions of swagger installed locally, point to the one located in your go path,
 # e.g. /Users/<username>/go/bin/swagger
 .PHONY: generate
-generate: you-need-to-install-go-swagger-check-readme clean
+generate: you-need-to-install-go-swagger-check-readme
+	./scripts/project-services-openapi.sh
+	$(MAKE) clean
 	mkdir -p pkg/api
 	swagger generate client -f api/public_api.swagger.json -t pkg/api -A ZeroXKeyAPI -T templates --allow-template-override
+
+.PHONY: tidy
+tidy:
 	go mod tidy
 
 .PHONY: clean

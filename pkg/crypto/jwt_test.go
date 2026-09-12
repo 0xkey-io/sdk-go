@@ -117,7 +117,7 @@ func TestVerifyAndDecodeSessionClaims(t *testing.T) {
 		"pub":                "session-public-key",
 		"exp":                time.Now().Add(time.Hour).Unix(),
 		"session_profile_id": "profile-id",
-		"scope":              []string{"root:write"},
+		"scope":              "root:write",
 	})
 
 	claims, err := VerifyAndDecodeSessionClaims(token, publicKey)
@@ -129,6 +129,9 @@ func TestVerifyAndDecodeSessionClaims(t *testing.T) {
 	}
 	if claims.SessionType != "SESSION_TYPE_READ_WRITE" || claims.PublicKey != "session-public-key" {
 		t.Fatalf("unexpected session metadata: %+v", claims)
+	}
+	if claims.UntrustedScope != "root:write" {
+		t.Fatalf("scope must be decoded only as explicitly untrusted metadata: %+v", claims)
 	}
 }
 

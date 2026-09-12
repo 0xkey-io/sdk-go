@@ -17,6 +17,9 @@ type SessionClaims struct {
 	PublicKey        string
 	ExpiresAt        int64
 	SessionProfileID string
+	// UntrustedScope is decoded for Turnkey wire compatibility only. Callers
+	// must resolve the Session Profile on the server before authorizing.
+	UntrustedScope string
 }
 
 // VerifyAndDecodeSessionClaims verifies the JWT signature before exposing its
@@ -45,6 +48,7 @@ func VerifyAndDecodeSessionClaims(jwtString string, dangerouslyOverrideNotarizer
 		ExpiresAt             int64  `json:"exp"`
 		SessionProfileID      string `json:"session_profile_id"`
 		CamelSessionProfileID string `json:"sessionProfileId"`
+		Scope                 string `json:"scope"`
 	}
 	if err := json.Unmarshal(payload, &raw); err != nil {
 		return nil, fmt.Errorf("decode session JWT claims: %w", err)
@@ -75,6 +79,7 @@ func VerifyAndDecodeSessionClaims(jwtString string, dangerouslyOverrideNotarizer
 	return &SessionClaims{
 		UserID: userID, OrganizationID: organizationID, SessionType: sessionType,
 		PublicKey: publicKey, ExpiresAt: raw.ExpiresAt, SessionProfileID: profileID,
+		UntrustedScope: raw.Scope,
 	}, nil
 }
 

@@ -17621,7 +17621,7 @@
        "type": "object",
        "properties": {
          "sendTransactionStatusId": {
-@@ -17264,49 +13344,29 @@
+@@ -17264,49 +13344,32 @@
          "sendTransactionStatusId"
        ]
      },
@@ -17662,9 +17662,9 @@
            "type": "boolean",
 +          "x-nullable": true,
            "description": "Invalidate all other previously generated Login API keys"
--        },
--        "sessionProfileId": {
--          "type": "string"
+         },
+         "sessionProfileId": {
+           "type": "string"
          }
        },
        "required": [

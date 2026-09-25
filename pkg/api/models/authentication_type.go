@@ -30,9 +30,6 @@ func (m AuthenticationType) Pointer() *AuthenticationType {
 
 const (
 
-	// AuthenticationTypeUnspecified captures enum value "AUTHENTICATION_TYPE_UNSPECIFIED"
-	AuthenticationTypeUnspecified AuthenticationType = "AUTHENTICATION_TYPE_UNSPECIFIED"
-
 	// AuthenticationTypeEmailOtp captures enum value "AUTHENTICATION_TYPE_EMAIL_OTP"
 	AuthenticationTypeEmailOtp AuthenticationType = "AUTHENTICATION_TYPE_EMAIL_OTP"
 
@@ -57,7 +54,7 @@ var AuthenticationTypeEnum []AuthenticationType
 
 func init() {
 	var res []AuthenticationType
-	if err := json.Unmarshal([]byte(`["AUTHENTICATION_TYPE_UNSPECIFIED","AUTHENTICATION_TYPE_EMAIL_OTP","AUTHENTICATION_TYPE_SMS_OTP","AUTHENTICATION_TYPE_PASSKEY","AUTHENTICATION_TYPE_API_KEY","AUTHENTICATION_TYPE_OAUTH","AUTHENTICATION_TYPE_SESSION"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["AUTHENTICATION_TYPE_EMAIL_OTP","AUTHENTICATION_TYPE_SMS_OTP","AUTHENTICATION_TYPE_PASSKEY","AUTHENTICATION_TYPE_API_KEY","AUTHENTICATION_TYPE_OAUTH","AUTHENTICATION_TYPE_SESSION"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {

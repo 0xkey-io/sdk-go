@@ -23,6 +23,9 @@ type ExternalDataV1Credential struct {
 	// Required: true
 	PublicKey *string `json:"publicKey"`
 
+	// The session profile associated with this credential, if any. This field is only applicable for credentials of type CREDENTIAL_TYPE_LOGIN.
+	SessionProfileID string `json:"sessionProfileId,omitempty"`
+
 	// type
 	// Required: true
 	Type *CredentialType `json:"type"`

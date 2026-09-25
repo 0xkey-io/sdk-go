@@ -32,6 +32,10 @@ type User struct {
 	// Required: true
 	CreatedAt *ExternalDataV1Timestamp `json:"createdAt"`
 
+	// A list of MFA Policies that define multi-factor authentication requirements for this user.
+	// Required: true
+	MfaPolicies []*MfaPolicy `json:"mfaPolicies"`
+
 	// A list of Oauth Providers.
 	// Required: true
 	OauthProviders []*OauthProvider `json:"oauthProviders"`
@@ -72,6 +76,10 @@ func (m *User) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateCreatedAt(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateMfaPolicies(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -175,6 +183,33 @@ func (m *User) validateCreatedAt(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *User) validateMfaPolicies(formats strfmt.Registry) error {
+
+	if err := validate.Required("mfaPolicies", "body", m.MfaPolicies); err != nil {
+		return err
+	}
+
+	for i := 0; i < len(m.MfaPolicies); i++ {
+		if swag.IsZero(m.MfaPolicies[i]) { // not required
+			continue
+		}
+
+		if m.MfaPolicies[i] != nil {
+			if err := m.MfaPolicies[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("mfaPolicies" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("mfaPolicies" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
 func (m *User) validateOauthProviders(formats strfmt.Registry) error {
 
 	if err := validate.Required("oauthProviders", "body", m.OauthProviders); err != nil {
@@ -265,6 +300,10 @@ func (m *User) ContextValidate(ctx context.Context, formats strfmt.Registry) err
 		res = append(res, err)
 	}
 
+	if err := m.contextValidateMfaPolicies(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateOauthProviders(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -341,6 +380,31 @@ func (m *User) contextValidateCreatedAt(ctx context.Context, formats strfmt.Regi
 			}
 			return err
 		}
+	}
+
+	return nil
+}
+
+func (m *User) contextValidateMfaPolicies(ctx context.Context, formats strfmt.Registry) error {
+
+	for i := 0; i < len(m.MfaPolicies); i++ {
+
+		if m.MfaPolicies[i] != nil {
+
+			if swag.IsZero(m.MfaPolicies[i]) { // not required
+				return nil
+			}
+
+			if err := m.MfaPolicies[i].ContextValidate(ctx, formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("mfaPolicies" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("mfaPolicies" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
 	}
 
 	return nil

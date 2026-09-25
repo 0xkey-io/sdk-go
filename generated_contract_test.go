@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"reflect"
 	"strings"
 	"testing"
 
@@ -13,9 +14,9 @@ import (
 	"github.com/0xkey-io/sdk-go/pkg/api/models"
 )
 
-const frozenOpenAPISHA256 = "b42fcfa9a9480c2d4148038b8d9112559132b11727c7f839e05cb2782e3350e2" // gitleaks:allow
-const frozenServicesCommit = "096c1fec26bed3b3f8104b473b35903db76760bb"
-const frozenGeneratorInputSHA256 = "80ab0f8b800ff3132d40397da71150d0eafb9b224e1107d5729e4a91990da4af"
+const frozenOpenAPISHA256 = "cca6a179db09bb9ea1d01deabd0b9e7122f4dbc1f27735efdcf433700aee42e2" // gitleaks:allow
+const frozenServicesCommit = "0eb6eb86a2ddb875552e97a33880d2c1c1eb4e4e"
+const frozenGeneratorInputSHA256 = "ce17ca2fc5f7356d61af1259ba76ecc836c37d8b5c78cadf29af6faf5c92dc96"
 
 //nolint:gocyclo // One table-like contract assertion intentionally checks every pinned field.
 func TestGeneratedMfaContractPin(t *testing.T) {
@@ -106,6 +107,28 @@ func TestGeneratedClientHasGetMfaStatus(t *testing.T) {
 	}
 	var api m_f_a_policies.ClientService
 	_ = api
+}
+
+func TestGeneratedTurnkeyIdentityContract(t *testing.T) {
+	credentialType := reflect.TypeOf(models.ExternalDataV1Credential{})
+	if _, ok := credentialType.FieldByName("SessionProfileID"); !ok {
+		t.Fatal("ExternalDataV1Credential missing SessionProfileID")
+	}
+
+	userType := reflect.TypeOf(models.User{})
+	field, ok := userType.FieldByName("MfaPolicies")
+	if !ok {
+		t.Fatal("User missing required MfaPolicies")
+	}
+	if field.Tag.Get("json") != "mfaPolicies" {
+		t.Fatalf("MfaPolicies json tag=%q want %q", field.Tag.Get("json"), "mfaPolicies")
+	}
+
+	for _, value := range models.AuthenticationTypeEnum {
+		if value == "AUTHENTICATION_TYPE_UNSPECIFIED" {
+			t.Fatal("AuthenticationType must not expose AUTHENTICATION_TYPE_UNSPECIFIED")
+		}
+	}
 }
 
 func TestGeneratedStampLoginIntentMarshalsSessionProfileID(t *testing.T) {

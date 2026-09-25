@@ -14624,6 +14624,14 @@
         },
         "updatedAt": {
           "$ref": "#/definitions/external.data.v1.Timestamp"
+        },
+        "mfaPolicies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/MfaPolicy"
+          },
+          "description": "A list of MFA Policies that define multi-factor authentication requirements for this user."
         }
       },
       "required": [
@@ -14634,7 +14642,8 @@
         "userTags",
         "oauthProviders",
         "createdAt",
-        "updatedAt"
+        "updatedAt",
+        "mfaPolicies"
       ]
     },
     "UserParams": {
@@ -15301,6 +15310,10 @@
         },
         "type": {
           "$ref": "#/definitions/CredentialType"
+        },
+        "sessionProfileId": {
+          "type": "string",
+          "description": "The session profile associated with this credential, if any. This field is only applicable for credentials of type CREDENTIAL_TYPE_LOGIN."
         }
       },
       "required": [
@@ -15487,15 +15500,13 @@
     "AuthenticationType": {
       "type": "string",
       "enum": [
-        "AUTHENTICATION_TYPE_UNSPECIFIED",
         "AUTHENTICATION_TYPE_EMAIL_OTP",
         "AUTHENTICATION_TYPE_SMS_OTP",
         "AUTHENTICATION_TYPE_PASSKEY",
         "AUTHENTICATION_TYPE_API_KEY",
         "AUTHENTICATION_TYPE_OAUTH",
         "AUTHENTICATION_TYPE_SESSION"
-      ],
-      "default": "AUTHENTICATION_TYPE_UNSPECIFIED"
+      ]
     },
     "DeleteMfaPolicyRequest": {
       "type": "object",

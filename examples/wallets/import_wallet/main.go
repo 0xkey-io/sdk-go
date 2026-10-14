@@ -139,7 +139,7 @@ func run() error {
 		return err
 	}
 
-	// For other HD wallet paths see https://docs.0xkey.com/concepts/wallets#hd-wallet-default-paths
+	// For other HD wallet paths see https://docs.0xkey.io/concepts/wallets#hd-wallet-default-paths
 	path := "m/44'/60'/1'/0/0"
 
 	// Generate a unique name with timestamp

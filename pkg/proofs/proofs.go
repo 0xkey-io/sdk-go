@@ -4,7 +4,7 @@
 // that proves 0xkey operations were executed within a genuine AWS Nitro Enclave.
 //
 // To learn more about verifying app proofs and boot proofs, see:
-// https://docs.0xkey.com/foundations/
+// https://docs.0xkey.io/foundations/
 package proofs
 
 import (
@@ -40,7 +40,7 @@ const (
 //  3. Verifies the app proof / boot proof connection - that the app proof's ephemeral public key matches attestation document's public_key field
 //
 // To learn more about verifying app proofs and boot proofs, see:
-// https://docs.0xkey.com/foundations/
+// https://docs.0xkey.io/foundations/
 func Verify(appProof *models.AppProof, bootProof *models.BootProof) error {
 	// 1. Verify App Proof signature
 	if err := VerifyAppProofSignature(appProof); err != nil {

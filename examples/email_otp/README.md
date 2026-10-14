@@ -1,9 +1,9 @@
 # Example: Email OTP backend auth flow
 
 This example demonstrates the full backend email OTP authentication flow using the
-[INIT_OTP](https://docs.0xkey.com/api-reference/activities/init-generic-otp),
-[VERIFY_OTP](https://docs.0xkey.com/api-reference/activities/verify-generic-otp), and
-[OTP_LOGIN](https://docs.0xkey.com/api-reference/activities/login-with-otp) activities.
+[INIT_OTP](https://docs.0xkey.io/api-reference/activities/init-generic-otp),
+[VERIFY_OTP](https://docs.0xkey.io/api-reference/activities/verify-generic-otp), and
+[OTP_LOGIN](https://docs.0xkey.io/api-reference/activities/login-with-otp) activities.
 
 ## Security model
 
@@ -56,7 +56,7 @@ substituting its own key.
 
 ## Setup
 
-Follow the [Quickstart](https://docs.0xkey.com/getting-started/quickstart) to obtain:
+Follow the [Quickstart](https://docs.0xkey.io/getting-started/quickstart) to obtain:
 
 - A parent organization API key pair (private key + organization ID)
 - A sub-organization ID containing the user to authenticate
@@ -74,7 +74,7 @@ go run main.go \
   -email          "user@example.com"
 ```
 
-For local `0xkey.com` testing, pass the local API endpoint and local enclave keys:
+For local testing, pass the local API endpoint and local enclave keys:
 
 ```bash
 go run main.go \

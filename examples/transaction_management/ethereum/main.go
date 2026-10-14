@@ -264,7 +264,7 @@ func swapETH(client *sdk.Client) error {
 // but including it explicitly provides maximal security posture against replay attacks:
 // it ensures that a signed request can only produce a single transaction, even if
 // infrastructure outside the enclave is compromised.
-// See: https://docs.0xkey.com/signing-automation/gas-station#security
+// See: https://docs.0xkey.io/signing-automation/gas-station#security
 //
 // Note: if you run multiple transactions back-to-back, wait for the previous one to
 // confirm before sending the next — otherwise the gas station nonce may not have

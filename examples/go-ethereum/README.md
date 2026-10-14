@@ -126,7 +126,7 @@ You **do not** need to regenerate it to run this example.
 
 Before running any of the examples, you’ll need:
 
-- A 0xkey [organization](https://docs.0xkey.com/getting-started/quickstart) with:
+- A 0xkey [organization](https://docs.0xkey.io/getting-started/quickstart) with:
   - an API key (P-256),
   - and an Ethereum wallet account (the address you’ll sign with).
 - A working Ethereum JSON-RPC endpoint (e.g. Sepolia from Alchemy, Infura, etc.).

@@ -1,5 +1,5 @@
 // Package main demonstrates the delegated access setup
-// For details check our docs https://docs.0xkey.com/concepts/policies/delegated-access
+// For details check our docs https://docs.0xkey.io/concepts/policies/delegated-access
 package main
 
 import (

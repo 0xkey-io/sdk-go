@@ -1,6 +1,6 @@
 # Solana Transaction Management Example
 
-Demonstrates 0xkey's [transaction management](https://docs.0xkey.com/concepts/transaction-management) feature for Solana with both sponsored and non-sponsored modes.
+Demonstrates 0xkey's [transaction management](https://docs.0xkey.io/concepts/transaction-management) feature for Solana with both sponsored and non-sponsored modes.
 
 ## Actions
 

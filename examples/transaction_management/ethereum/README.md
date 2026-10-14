@@ -1,6 +1,6 @@
 # Transaction Management Example
 
-Demonstrates 0xkey's [transaction management](https://docs.0xkey.com/concepts/transaction-management) feature with both sponsored and non-sponsored modes.
+Demonstrates 0xkey's [transaction management](https://docs.0xkey.io/concepts/transaction-management) feature with both sponsored and non-sponsored modes.
 
 ## Actions
 
@@ -124,7 +124,7 @@ There are two distinct nonces involved in transaction management:
 
 - **On-chain nonce** — the standard Ethereum transaction nonce. 0xkey resolves this automatically in both sponsored and non-sponsored modes; you never need to provide it. If you want to manage it yourself, you can fetch it via `GetNonces` with `Nonce: true` and set `intent.Nonce` (see example below). Custom on-chain nonces are not compatible with sponsored transactions.
 
-- **Gas station nonce** — a nonce specific to the gas station delegate contract, only relevant for sponsored transactions (`sponsor: true`). 0xkey handles this internally if omitted, but passing it explicitly provides maximal security against replay attacks: it ensures a signed request can only produce a single transaction. See the [Gas Station security docs](https://docs.0xkey.com/signing-automation/gas-station#security). This example passes it explicitly.
+- **Gas station nonce** — a nonce specific to the gas station delegate contract, only relevant for sponsored transactions (`sponsor: true`). 0xkey handles this internally if omitted, but passing it explicitly provides maximal security against replay attacks: it ensures a signed request can only produce a single transaction. See the [Gas Station security docs](https://docs.0xkey.io/signing-automation/gas-station#security). This example passes it explicitly.
 
 ### Providing a custom on-chain nonce
 

@@ -1,6 +1,6 @@
 # Example: `delegated-access`
 
-A sample script that quickly configures a Delegated Access setup (see https://docs.0xkey.com/concepts/policies/delegated-access):
+A sample script that quickly configures a Delegated Access setup (see https://docs.0xkey.io/concepts/policies/delegated-access):
 
 - Creates a Sub-Organization with a Delegated user account (having an API key) and an End User account
 - Creates a new Policy for the Delegated account that allows signing transactions only to a specific destination address
@@ -10,7 +10,7 @@ A sample script that quickly configures a Delegated Access setup (see https://do
 
 ### 1/ Setting up 0xkey
 
-The first step is to set up your 0xkey organization and account. By following the [Quickstart](https://docs.0xkey.com/getting-started/quickstart) guide, you should have:
+The first step is to set up your 0xkey organization and account. By following the [Quickstart](https://docs.0xkey.io/getting-started/quickstart) guide, you should have:
 
 - A public/private API key pair for 0xkey parent organization
 - An organization ID
